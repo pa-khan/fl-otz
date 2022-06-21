@@ -1,5 +1,54 @@
 include ../../pug/vars
 
 header.header
-	.case
-		
+  .header__panel.panel
+    .case
+      .panel__wrap.row
+        a.panel__logo(href="")
+        .panel__desc доставка по России <br>и странам СНГ
+        .panel__phone
+          a(href="tel:+78004444240") 8 (800) 4444 240
+        .panel__email
+          a(href="mailto:zavod@otz-petal.ru") zavod@otz-petal.ru
+        .panel__ham
+          div
+          div
+          div
+  .header__nav.nav.sec
+    .case
+      .nav__wrap.row
+        .nav__left
+          .nav__contacts
+            .nav__socials.socials
+              a(class="socials__item" href="https://facebook.com" target="_blank")
+              a(class="socials__item" href="https://ok.ru" target="_blank")
+              a(class="socials__item" href="https://instagram.com" target="_blank")
+            .nav__phone #[a(href="tel:+73812382322") +7 (3812) 38-23-22]
+            .nav__email #[a(href="mailto:zavod@otz-petal.ru") zavod@otz-petal.ru]
+            .nav__address Омск, 1-я Казахстанская, 30
+          .nav__company
+            .nav__desc омский трубный завод
+            .nav__name PETAL
+            .nav__title.t0 OMSK PLANT
+        .nav__right
+          .nav__list
+            .nav__item
+              a.nav__link(href="about.html") О нас
+            .nav__item
+              a.nav__link(href="#") продукция   
+              .nav__sub
+                .nav__item
+                  a.nav__link(href="pipes-fittings.html") Трубы ППУ
+                .nav__item
+                  a.nav__link(href="polyethylene.html") Трубы полиэтиленовые
+                .nav__item
+                  a.nav__link(href="shell.html") Скорлупа ППУ
+                .nav__item
+                  a.nav__link(href="vys.html") Трубы ВУС
+                .nav__item
+                  a.nav__link(href="poly-gal.html") Труба-оболочка полиэтиленовая
+            .nav__item
+              a.nav__link(href="production.html") производство
+            .nav__item
+              a.nav__link(href="contacts.html") контакты
+    .lines

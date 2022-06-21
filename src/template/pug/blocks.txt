@@ -6,3 +6,67 @@ include ../../blocks/header/header
 +style('footer', 'blocks')
 include ../../blocks/footer/footer
 
+//- intro 
++style('intro', 'blocks')
+include ../../blocks/intro/intro
+
+//- advantages 
++style('advantages', 'blocks')
+include ../../blocks/advantages/advantages
+
+//- catalog 
++style('catalog', 'blocks')
+include ../../blocks/catalog/catalog
+
+//- consult 
++style('consult', 'blocks')
+include ../../blocks/consult/consult
+
+//- geo 
++style('geo', 'blocks')
+include ../../blocks/geo/geo
+
+//- news 
++style('news', 'blocks')
+include ../../blocks/news/news
+
+//- product 
++style('product', 'blocks')
+include ../../blocks/product/product
+
+//- info 
++style('info', 'blocks')
+include ../../blocks/info/info
+
+//- images 
++style('images', 'blocks')
+include ../../blocks/images/images
+
+//- order 
++style('order', 'blocks')
+include ../../blocks/order/order
+
+//- props 
++style('props', 'blocks')
+include ../../blocks/props/props
+
+//- desc 
++style('desc', 'blocks')
+include ../../blocks/desc/desc
+
+//- certs 
++style('certs', 'blocks')
+include ../../blocks/certs/certs
+
+//- production 
++style('production', 'blocks')
+include ../../blocks/production/production
+
+//- steps 
++style('steps', 'blocks')
+include ../../blocks/steps/steps
+
+//- contacts 
++style('contacts', 'blocks')
+include ../../blocks/contacts/contacts
+

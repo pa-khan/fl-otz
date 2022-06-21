@@ -1,0 +1,42 @@
+extends ../../templates/default
+block vars
+  -
+    title = "О НАС, О ЗАВОДЕ"
+    breadcrumbs = [
+      ['Главная', 'index.html'],
+      [title]
+    ]
+block content
+  
+  -
+    advantagesClass = '--steps'
+    advantagesType = 'steps'
+    advantagesMain = 'ABOUT'
+    advantagesSubtitle = 'Омский трубный завод «Петал»'
+    advantagesTitle = 'О НАС, О ЗАВОДЕ'
+    advantages = [
+      {
+        count: '21',
+        name: 'год на рынке',
+        text: 'Очень хорошо знаем свое <br>дело. Работаем на рынке <br>теплоизоляционных <br>материалов с 2001 года'
+      },
+      {
+        count: '50',
+        name: 'сотрудников',
+        text: 'С высокой <br>квалификацией работает на заводе. <br>Выпускаемая продукция проходит <br>контроль качества'
+      },
+      {
+        count: '400',
+        name: 'клиентов',
+        text: 'Работают с нами <br>на постоянной основе. <br>С некоторыми клиентами <br>мы сотрудничаем  по 8-15 лет'
+      },
+      {
+        count: '4000',
+        name: 'м.кв',
+        text: 'Площадь завода. <br>Это позволяет работать  <br>с большим количеством <br>заказов'
+      },
+    ]
+  include ../../../blocks/advantages/advantages
+
+  include ../../../blocks/desc/desc
+  include ../../../blocks/certs/certs

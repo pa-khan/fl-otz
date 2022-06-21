@@ -1,0 +1,15 @@
+extends ../../templates/default
+block vars
+  -
+    title = "Наше произвоство"
+    breadcrumbs = [
+      ['Главная', 'index.html'],
+      [title]
+    ]
+block content
+  include ../../../blocks/production/production
+
+  include ../../../blocks/steps/steps
+
+  include ../../../blocks/news/news
+  

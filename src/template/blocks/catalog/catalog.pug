@@ -1,0 +1,55 @@
+include ../../pug/vars
+
+.catalog.sec
+  .case
+    .catalog__main.h0 PRODUCT
+    .catalog__subtitle.h2 актуально в данный момент
+    .catalog__title.h1 продукция
+  .catalog__list
+    -
+      catalog = [
+        {
+          img: '',
+          title: 'Трубы и фасонные изделия в ППУ ГОСТ 30732-2020',
+          desc: 'применяются в теплоизоляции для бесканальной прокладки как надземных, так и подземных тепловых сетей',
+          link: 'pipes-fittings.html',
+        },
+        {
+          img: '',
+          title: 'Скорлупа ППУ',
+          desc: 'устанавливаются непосредственно на трубопровод с помощью хомутов (ленточных или проволочных) или же клеевых составов',
+          link: 'shell.html',
+        },
+        {
+          img: '',
+          title: 'Трубы полиэтиленовые (ПНД) ГОСТ 18599',
+          desc: 'трубы из полиэтилена низкого давления, диаметром от 20 мм до 450 мм для систем водоснабжения и канализации',
+          link: 'polyethylene.html',
+        },
+        {
+          img: '',
+          title: 'Трубы-оболочки полиэтиленовые (ПЭ) и оцинкованные (ОЦ)',
+          desc: 'используются в качестве оболочки для труб ППУ, выпускаемых по ГОСТ 30732',
+          link: 'poly-gal.html',
+        },
+        {
+          img: '',
+          title: 'Трубы ВУС  ГОСТ 9.602-2016',
+          desc: 'предназначены для газо-, нефте-, водопроводов для подземной и подводной прокладки  с температурой эксплуатации до + 60°С',
+          link: 'vys.html',
+        },
+      ]
+    if catalog
+      each item, index in catalog
+        a.catalog__item.row(href=item.link)
+          .case
+            .catalog__item-inner
+              .catalog__item-count= '0' + (index + 1)
+              .catalog__item-img.img
+                img(src=item.img)
+              .catalog__item-content
+                .catalog-item-title=item.title
+                .catalog-item-desc=item.desc
+              .catalog__item-arrow
+
+  .lines

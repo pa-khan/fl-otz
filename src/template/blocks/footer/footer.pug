@@ -1,5 +1,64 @@
 include ../../pug/vars
 
-footer.footer
-	.case
-		
+footer.footer.sec
+  .footer__top
+    .case
+      .footer__top-wrap.row
+        .footer__left
+          .footer__phone #[a(href="tel:+73812382322") +7 (3812) 38-23-22]
+          .footer__email #[a(href="mailto:zavod@otz-petal.ru") zavod@otz-petal.ru]
+        .footer__mid
+          .footer__address Омск, <br>1-я Казахстанская, 30
+        .footer__right
+          .footer__socials.socials
+            a(class="socials__item" href="https://facebook.com" target="_blank")
+            a(class="socials__item" href="https://ok.ru" target="_blank")
+            a(class="socials__item" href="https://instagram.com" target="_blank")
+    .lines
+
+  .footer__bot
+    .case
+      .footer__bot-wrap.row
+        .footer__left
+          .footer__copy Copyright © Омский трубный завод “Петал”
+        .footer__mid
+          .footer__policy #[a(href="") Политика приватности]
+        .footer__right
+          .footer__dev #[a(href="" target="_blank") разработано в #[span xy studio]]
+    .lines
+
+
+.modals
+  .modal.--md#modal-order
+    .modal__close
+    .modal__inner
+      .form
+        .form__main.h0 CALL
+        .form__subtitle.h2 поможем. посоветуем
+        .form__title.h1 заявка на поставку
+        .form__inner
+          .form__input.input.--gray
+            .input__wrap
+              .input__title Количество единиц
+              input.input__area(type="tel" name="count")
+          .form__input.input.--gray
+            .input__wrap
+              .input__title Укажите необходимый диаметр
+              input.input__area(type="tel" name="size")
+          .form__input.input.--gray
+            .input__wrap
+              .input__title Ваше имя
+              input.input__area(type="text" name="name")
+          .form__input.input.--gray.--phone
+            .input__wrap
+              .input__title Телефон
+              input.input__area(type="tel" name="phone")
+          button.form__btn.btn.--md.--b-blue отправить
+
+  .modal.--md#modal-thanks
+    .modal__close
+    .modal__inner
+      .thanks
+        .thanks__title спасибо за оформленную заявку, мы свяжемся с вами  в ближайшее время
+        .thanks__icon
+          img(src="" alt="")

@@ -1,0 +1,35 @@
+include ../../pug/vars
+
+if product
+  .product
+    .case
+      .product__wrap.row
+        .product__left
+          .product__desc.h2= product.gost
+          .product__title.h1= product.title
+          .product__img.--hidden.--show-xs
+            img(src=product.img alt="")
+          .product__text.t1!= product.text
+
+        .product__right
+          .product__inner
+            .product__desc.h2 Снижают теплопотерии защищают от коррозии
+            .product__img
+              img(src=product.img alt="")
+      .product__infos
+        .product__infos-left
+          if product.infos.left
+            each item in product.infos.left
+              .product__info
+                if item.head
+                  .product__info-head!=item.head
+                if item.body
+                  .product__info-body!=item.body
+        .product__infos-right
+          if product.infos.right
+            each item in product.infos.right
+              .product__info
+                if item.head
+                  .product__info-head!=item.head
+                if item.body
+                  .product__info-body!=item.body

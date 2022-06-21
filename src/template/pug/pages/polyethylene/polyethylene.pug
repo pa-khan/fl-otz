@@ -1,0 +1,671 @@
+extends ../../templates/default
+block vars
+  -
+    title = "Трубы полиэтиленовые"
+    breadcrumbs = [
+      ['Главная', 'index.html'],
+      [title]
+    ]
+block content
+  -
+    product = {
+      title: 'Трубы полиэтиленовые',
+      gost: 'в соответствии  с ГОСТ 30732-2020',
+      img: 'uploads/',
+      text: '<p>ОТЗ «Петал» является производителем напорных полиэтиленовых труб (трубы ПНД) из полиэтилена низкого давления.</p>',
+      infos: {
+        left: [
+          {
+            head: '<p><u>трубы ПНД могут использоваться в качестве: </u></p><ul><li>водопроводных (для питьевой и технической трубы)</li><li>канализационных (для бытовых и промышленных систем канализации)</li><li>дренажных (для дренажной системы в сельскохозяйственной отрасли)</li><li>технических (в качестве кабель каналов)</li></ul>',
+            body: '<p>ОТЗ Петал производит трубы ПНД на современном оборудовании в соответствии с ГОСТ 18599</p><p><u>Ду от 20 мм до 63 мм</u> в бухтах по 100-200 м</p><p><u>Ду от 20 мм до 63 мм</u> в бухтах по 100-200 м</p>',
+          },
+        ],
+        right: [
+
+        ],
+      }
+
+    }
+  include ../../../blocks/product/product
+
+  include ../../../blocks/info/info
+
+  -
+    images = [
+      'uploads/',
+      'uploads/',
+      'uploads/',
+      'uploads/',
+      'uploads/',
+    ]
+  include ../../../blocks/images/images
+
+
+  -
+    props = [
+      {
+        title: 'не изнашиваются',
+      },
+      {
+        title: 'не поддаются коррозии',
+      },
+      {
+        title: 'не боятся контакта с водой и агрессивными средами',
+      },
+      {
+        title: 'не требуют катодной защиты',
+      },
+      {
+        title: 'Растягиваются  до 7%',
+        desc: 'Без потери своих качеств '
+      },
+      {
+        title: 'Долговечны',
+        desc: 'На 25-30% выше, чем у стальной, при одинаковом диаметре'
+      },
+      {
+        title: 'Растягиваются  до 7%',
+        desc: 'Без потери своих качеств '
+      },
+      {
+        title: 'высокая Пропускная способность ',
+        desc: 'На 25-30% выше, чем у стальной, при одинаковом диаметре'
+      },
+    ]
+  include ../../../blocks/props/props
+
+
+  .data
+    .case
+      table.data__table
+        thead
+          tr
+            th Наружный  диаметр  трубы, мм.
+            th
+              p SDR 9 <br>(20 атм)
+              div
+                div толщина стенок, мм
+                div масса 1 п/м, кг.
+            th
+              p SDR 11 <br>(16 атм)
+              div
+                div толщина стенок, мм
+                div масса 1 п/м, кг.
+            th
+              p SDR 11 <br>(16 атм)
+              div
+                div толщина стенок, мм
+                div масса 1 п/м, кг.
+            th
+              p SDR 13,6 <br>(12,5 атм)
+              div
+                div толщина стенок, мм
+                div масса 1 п/м, кг.
+            th
+              p SDR 17 <br>(10 атм)
+              div
+                div толщина стенок, мм
+                div масса 1 п/м, кг.
+            th
+              p SDR 21 <br>(8 атм)
+              div
+                div толщина стенок, мм
+                div масса 1 п/м, кг.
+            th
+              p SDR 26 <br>(6,3 атм)
+              div
+                div толщина стенок, мм
+                div масса 1 п/м, кг.
+        tbody
+          tr
+            td
+              u 20
+            td
+              div
+                div 2,3
+                div 0,134
+            td
+              div
+                div 2,0
+                div 0,118
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 25
+            td
+              div
+                div 2,8
+                div 0,201
+            td
+              div
+                div 2,3
+                div 0,172
+            td
+              div
+                div 2,0
+                div 0,151
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 32
+            td
+              div
+                div 3,6
+                div 0,329
+            td
+              div
+                div 3,0
+                div 0,280
+            td
+              div
+                div 2,4
+                div 0,233
+            td
+              div
+                div 2,0
+                div 0,197
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 40
+            td
+              div
+                div 4,5
+                div 0,511
+            td
+              div
+                div 3,7
+                div 0,432
+            td
+              div
+                div 3,0
+                div 0,358
+            td
+              div
+                div 2,4 
+                div 0,297
+            td
+              div
+                div 2,0
+                div 0,249
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 50
+            td
+              div
+                div 5,6
+                div 0,798
+            td
+              div
+                div 4,6
+                div 0,669
+            td
+              div
+                div 3,7
+                div 0,552
+            td
+              div
+                div 3,0
+                div 0,456
+            td
+              div
+                div 2,4
+                div 0,376
+            td
+              div
+                div 2,0
+                div 0,315
+          tr
+            td
+              u 63
+            td
+              div
+                div 7,1
+                div 1,27
+            td
+              div
+                div 5,8
+                div 1,06
+            td
+              div
+                div 4,7
+                div 0,885
+            td
+              div
+                div 3,8
+                div 0,724
+            td
+              div
+                div 3,0
+                div 0,582
+            td
+              div
+                div 2,5
+                div 0,497
+          tr
+            td
+              u 110
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 10,0
+                div 3,14
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 6,6
+                div 2,16
+            td
+              div
+                div 5,3
+                div 1,77
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 125
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 11,4
+                div 4,08
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 7,4
+                div 2,75
+            td
+              div
+                div 6,0
+                div 2,26
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 140
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 12,7
+                div 5,08
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 8,3
+                div 3,46
+            td
+              div
+                div 6,7
+                div 2,83
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 160
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 14,6
+                div 6,67
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 9,5
+                div 4,51 
+            td
+              div
+                div 7,7
+                div 3,71
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 180
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 16,4
+                div 8,43
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 10,7
+                div 5,71
+            td
+              div
+                div 8,6
+                div 4,66
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 200
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 18,2
+                div 10,4
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 11,9
+                div 7,04
+            td
+              div
+                div 9,6
+                div 5,77
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 225
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 20,5
+                div 13,2
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 13,4
+                div 8,94
+            td
+              div
+                div 10,8
+                div 7,29
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 250
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 22,7
+                div 16,2
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 14,8
+                div 11,0
+            td
+              div
+                div 11,9
+                div 8,92
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 280
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 25,4
+                div 20,3
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 16,6
+                div 13,8
+            td
+              div
+                div 13,4
+                div 11,3
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 315
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 28,6
+                div 25,7
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 18,7
+                div 17,4
+            td
+              div
+                div 15,0
+                div 14,2
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 355
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 32,2
+                div 32,6
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 21,1
+                div 22,2
+            td
+              div
+                div 16,9
+                div 18,0
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 400
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 36,3
+                div 41,4
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 23,7
+                div 28,0
+            td
+              div
+                div 19,1
+                div 22,9
+            td
+              div
+                div 
+                div 
+          tr
+            td
+              u 450
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 40,9
+                div 52,4
+            td
+              div
+                div 
+                div 
+            td
+              div
+                div 26,7
+                div 35,5
+            td
+              div
+                div 21,5
+                div 29,0
+            td
+              div
+                div 
+                div 
+
+  -
+    advantages = [
+      {
+        title: 'затраты на транспортировку',
+        text: 'в 2 раза меньше,  чем на транспортировку стальных'
+      },
+      {
+        title: 'Меньше Масса',
+        text: 'более чем в 8 раз меньше массы стальных труб'
+      },
+      {
+        title: 'меньше  стоимость',
+        text: 'выполнения строительно-монтажных работ сокращается в 2—2,5 раза'
+      },
+      {
+        title: 'большая эластичность',
+        text: 'что позволяет легко вписывать их в повороты трассы'
+      },
+      {
+        title: 'сокращение сроков работ',
+        text: 'скорость прокладки полиэтиленовых сетей в 10 раз и более превышает скорость прокладки стальных сетей '
+      },
+      {
+        title: 'с щадящие методы прокладки',
+        text: 'сокращающие расходы  на монтаж и уменьшающие отрицательное воздействие  на окружающую среду'
+      },
+      {
+        title: 'пропускная способность',
+        text: 'Экологически безопасный материал'
+      },
+      {
+        title: 'Высокие технологии',
+        text: 'отсутствие необходимости применения дорогостоящих методов проверки и контроля качества сварных соединений'
+      },
+    ]
+  include ../../../blocks/advantages/advantages
+
+  include ../../../blocks/news/news

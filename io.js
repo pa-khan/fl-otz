@@ -30,8 +30,8 @@ if (process.argv.length > 1) {
 			for (let item of argv.list) {
 				var name = item;
 				new Creator(name, PATH.PAGES, ['.pug'], {true: `Страница ${name} успешно создан`, false: `Страница ${name} уже имеется`})				
-				var opn = require('opn');
-				opn('localhost:3000/' + name + '.html');
+				// var opn = require('opn');
+				// opn('localhost:3000/' + name + '.html');
 			}	
 			break;
 		case '-w':

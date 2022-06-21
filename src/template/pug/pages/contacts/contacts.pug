@@ -1,0 +1,11 @@
+extends ../../templates/default
+block vars
+  -
+    title = "Контакты"
+    breadcrumbs = [
+      ['Главная', 'index.html'],
+      [title]
+    ]
+block content
+  include ../../../blocks/contacts/contacts
+  

@@ -1,0 +1,11 @@
+include ../../pug/vars
+
+.images.sec
+  .case
+    if images
+      .images__list
+        each item in images
+          .images__item.img
+            img(src=item alt="")
+  .lines
+    

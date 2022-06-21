@@ -1,0 +1,68 @@
+include ../../pug/vars
+
+.steps.sec
+  .case
+    .steps__main.h0 TIME WOR
+    .steps__subtitle.h2 хронология процесса
+    .steps__title.h1 этапы работы
+    .steps__list
+      -
+        steps = [
+          {
+            img: 'uploads/steps/',
+            text: 'Участок по производству ПЭ и Участок по производству трубы пнд ду 110мм-450мм'
+          },
+          {
+            img: 'uploads/steps/',
+            text: 'Участок по производству ОЦ оболочки  для труб ППУ '
+          },
+          {
+            img: 'uploads/steps/',
+            text: 'Сборка и заливка труб в ППУ'
+          },
+          {
+            img: 'uploads/steps/',
+            text: 'Сварочный цех. Сварщики работают  на оборудовании бесконтактной сварки и имеют аттестацию НАКС'
+          },
+          {
+            img: 'uploads/steps/',
+            text: 'Цех сборки и изоляции фасонных изделий в ППУ'
+          },
+          {
+            img: 'uploads/steps/',
+            text: 'Участок по производству термомуфт  и комплектующих'
+          },
+          {
+            img: 'uploads/steps/',
+            text: 'Участок по производству трубы пнд ду 20мм-63мм'
+          },
+          {
+            img: 'uploads/steps/',
+            text: 'Цех по производству скорлупы ППУ'
+          },
+          {
+            img: 'uploads/steps/',
+            text: 'Участок по изоляции ВУС на основе экструдированного полиэтилена'
+          },
+          {
+            img: 'uploads/steps/',
+            text: 'Лаборатория для проверки и контроля качества сырья и готовой продукции'
+          },
+        ]
+      if steps
+        each step, index in steps
+          - counter = index + 1
+          .steps__item
+            .steps__img.img
+              img(src=step.img alt="")
+            .steps__control #[div.steps__dot]
+            .steps__content
+              .steps__count= counter < 10 ? '0' + counter : counter
+              .steps__text= step.text
+
+      .steps__feedback
+        a.steps__feedback-btn.btn.--md.--b-blue(href="") связаться с нами
+        .steps__feedback-dot.steps__dot
+
+
+  .lines
