@@ -9,25 +9,26 @@ include ../../pug/vars
       .consult__left
         .consult__desc Оставьте заявку и мы с вами свяжемся в ближайшее время
       .consult__right
-        .consult__input.input.--gray
-          .input__wrap
-            .input__title Ваше имя
-            input.input__area(type="text" name="name")
-        .consult__input.input.--gray.--phone
-          .input__wrap
-            .input__title Телефон
-            input.input__area(type="tel" name="phone")
-        .consult__textarea.textarea.--gray
-          .textarea__wrap
-            .textarea__title Сообщение
-            textarea.textarea__area(name="message")
-        .consult__grp
-          button.consult__btn.btn.--md.--b-blue отправить
-          .consult__check.check
-            input.check__input(type="checkbox" name="policy" checked="checked")
-            .check__wrap
-              .check__box
-              .check__title Я согласен с политикой конфиденциальности
+        .consult__form.row
+          .consult__input.input.--gray
+            .input__wrap
+              .input__title Ваше имя
+              input.input__area(type="text" name="name")
+          .consult__input.input.--gray.--phone
+            .input__wrap
+              .input__title Телефон
+              input.input__area(type="tel" name="phone")
+          .consult__textarea.textarea.--gray
+            .textarea__wrap
+              .textarea__title Сообщение
+              textarea.textarea__area(name="message")
+          .consult__grp
+            button.consult__btn.btn.--md.--b-blue отправить
+            .consult__check.check
+              input.check__input(type="checkbox" name="policy" checked="checked")
+              .check__wrap
+                .check__box
+                .check__title Я согласен с политикой конфиденциальности
 
   .lines
 

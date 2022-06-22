@@ -10,9 +10,9 @@ html, body {
 }
 
 body {
-  color: #000000;
-  font-size: 16px;
-  font-family: "Tahoma", sans-serif;
+  color: #363838;
+  font-size: 20px;
+  font-family: "Futura PT", sans-serif;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -37,7 +37,7 @@ li {
 }
 
 a {
-  color: #000000;
+  color: #363838;
   text-decoration: none;
   outline: none;
   transition: 0.3s;

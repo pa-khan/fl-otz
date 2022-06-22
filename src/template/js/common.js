@@ -1,8 +1,59 @@
 var html = document.querySelector('html'),
 		body = document.querySelector('body'),
-		wrap = document.querySelector('.wrap');
+		wrap = document.querySelector('.wrap'),
+    classOverflow = 'overflow-disable';
 
 document.addEventListener('DOMContentLoaded', ()=>{
+  // header
+  const header = document.querySelector('.header'),
+        ham    = document.getElementById('ham'), 
+        headerClassWhite = '--white';
+        headerClassOpen  = '--open';
+
+  if (header.dataset.white) {
+    headerToggleClass();
+    window.addEventListener('scroll', headerToggleClass);
+  }
+
+  ham.addEventListener('click', toggleHeaderClassOpen);
+
+  function headerToggleClass() {
+    if (window.pageYOffset == 0) {
+      header.classList.add(headerClassWhite);
+    } else {
+      header.classList.remove(headerClassWhite);
+    }
+  }
+
+  function toggleHeaderClassOpen() {
+    header.classList.toggle(headerClassOpen);
+    html.classList.toggle(classOverflow);
+    body.classList.toggle(classOverflow);
+    wrap.classList.toggle(classOverflow);
+  }
+    
+  // lines
+  let linesBlocks = document.querySelectorAll('.lines');
+  if (linesBlocks) {
+    linesBlocks.forEach((linesBlock)=>{
+      for (let i = 0; i <= 4; i++) {
+        let div = document.createElement('div');
+        div.className = 'lines__line';
+        linesBlock.append(div);
+      }
+    })
+  }
+
+  // intro
+  const introVideo  = document.querySelector('.intro__video video'),
+        introVolume = document.querySelector('.intro__volume');
+        introVolumeClass = '--unmute';
+    
+  introVolume.addEventListener('click', ()=>{
+    introVolume.classList.toggle(introVolumeClass);
+    introVideo.muted = !introVideo.muted;
+  });
+
 	// Fields
 	let fields = document.querySelectorAll('.field');
 	 

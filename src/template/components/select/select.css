@@ -53,15 +53,10 @@
 }
 .select.--b-gray .select__area {
   border-radius: 5px;
-  border-color: #eee;
 }
 .select.--b-gray .select__drop {
   border-radius: 0 0 5px 5px;
-  border-color: #eee;
   background-color: #fff;
-}
-.select.--b-gray .select__item.--selected {
-  background-color: #eee;
 }
 .select.--open {
   z-index: 5;

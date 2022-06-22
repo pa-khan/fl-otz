@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/futura/futura_pt_light.eot");
+  src: url("../fonts/futura/futura_pt_light.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/futura_pt_light.woff2") format("woff2"), url("../fonts/futura/futura_pt_light.woff") format("woff"), url("../fonts/futura/futura_pt_light.ttf") format("truetype"), url("../fonts/futura/futura_pt_light.svg#futura_pt_light") format("svg");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/futura/futura_pt_book.eot");
+  src: url("../fonts/futura/futura_pt_book.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/futura_pt_book.woff2") format("woff2"), url("../fonts/futura/futura_pt_book.woff") format("woff"), url("../fonts/futura/futura_pt_book.ttf") format("truetype"), url("../fonts/futura/futura_pt_book.svg#futura_pt_book") format("svg");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/futura/futura_pt_medium.eot");
+  src: url("../fonts/futura/futura_pt_medium.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/futura_pt_medium.woff2") format("woff2"), url("../fonts/futura/futura_pt_medium.woff") format("woff"), url("../fonts/futura/futura_pt_medium.ttf") format("truetype"), url("../fonts/futura/futura_pt_medium.svg#futura_pt_medium") format("svg");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/futura/futura_pt_demi.eot");
+  src: url("../fonts/futura/futura_pt_demi.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/futura_pt_demi.woff2") format("woff2"), url("../fonts/futura/futura_pt_demi.woff") format("woff"), url("../fonts/futura/futura_pt_demi.ttf") format("truetype"), url("../fonts/futura/futura_pt_demi.svg#futura_pt_demi") format("svg");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/futura/futura_pt_bold.eot");
+  src: url("../fonts/futura/futura_pt_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/futura_pt_bold.woff2") format("woff2"), url("../fonts/futura/futura_pt_bold.woff") format("woff"), url("../fonts/futura/futura_pt_bold.ttf") format("truetype"), url("../fonts/futura/futura_pt_bold.svg#futura_pt_bold") format("svg");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/futura/futura_pt_extra_bold.eot");
+  src: url("../fonts/futura/futura_pt_extra_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/futura_pt_extra_bold.woff2") format("woff2"), url("../fonts/futura/futura_pt_extra_bold.woff") format("woff"), url("../fonts/futura/futura_pt_extra_bold.ttf") format("truetype"), url("../fonts/futura/futura_pt_extra_bold.svg#futura_pt_extra_bold") format("svg");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Futura PT";
+  src: url("../fonts/futura/futura_pt_heavy.eot");
+  src: url("../fonts/futura/futura_pt_heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/futura_pt_heavy.woff2") format("woff2"), url("../fonts/futura/futura_pt_heavy.woff") format("woff"), url("../fonts/futura/futura_pt_heavy.ttf") format("truetype"), url("../fonts/futura/futura_pt_heavy.svg#futura_pt_heavy") format("svg");
+  font-weight: 900;
+}
