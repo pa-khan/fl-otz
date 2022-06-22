@@ -225,6 +225,7 @@ img, svg, path, circle, rect, line {
   overflow: hidden;
   resize: none;
   transition: 0.3s;
+  background: transparent;
 }
 .field__area::placeholder {
   opacity: 0;
@@ -1153,4 +1154,116 @@ img, svg, path, circle, rect, line {
 }
 .footer__dev span {
   color: #0567C3;
+}
+
+.modal {
+  display: none;
+  z-index: 1;
+  position: relative;
+  background: #FBFBFB;
+  overflow: hidden;
+}
+.modal.--md {
+  width: 905px;
+  min-height: 410px;
+  padding: 115px 160px 95px;
+}
+.modal__close {
+  opacity: 0.3;
+  position: absolute;
+  top: 40px;
+  right: 45px;
+  width: 22px;
+  height: 22px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.modal__close:before, .modal__close:after {
+  content: "";
+  width: 28px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 0.3s;
+  background: #363838;
+}
+.modal__close:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.modal__close:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal__close:hover:before, .modal__close:hover:after {
+  background: #0567C3;
+}
+
+.form {
+  width: 100%;
+  max-width: 555px;
+  margin: 0 auto;
+}
+.form__main {
+  opacity: 0.07;
+  top: 11px;
+  left: 0;
+  color: #C4C4C4;
+}
+.form__subtitle {
+  margin-left: 0;
+  margin-bottom: 35px;
+}
+.form__title {
+  margin-left: 0;
+  font-size: 51px;
+  line-height: 1;
+  font-weight: 500;
+  color: #0567C3;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 120px;
+}
+.form__inner {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.form__field {
+  width: calc(50% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 42px;
+}
+.form__button {
+  margin-top: 26px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.thanks {
+  padding-top: 10px;
+}
+.thanks__title {
+  text-align: center;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  max-width: 450px;
+  margin: 0 auto 18px;
+  background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.thanks__icon {
+  margin-bottom: -35px;
+}
+.thanks__icon img {
+  margin: 0 auto;
 }

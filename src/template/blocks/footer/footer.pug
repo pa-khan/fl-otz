@@ -28,7 +28,7 @@ footer.footer.sec
         .footer__mid
           .footer__policy #[a(href="") Политика приватности]
         .footer__right
-          .footer__dev #[a(href="" target="_blank") разработано в #[span xy studio]]
+          .footer__dev #[a(href="https://xystudio.ru/" target="_blank") разработано в #[span xy studio]]
     .lines
 
 
@@ -39,30 +39,30 @@ footer.footer.sec
       .form
         .form__main.h0 CALL
         .form__subtitle.h2 поможем. посоветуем
-        .form__title.h1 заявка на поставку
-        .form__inner
-          .form__input.input.--gray
-            .input__wrap
-              .input__title Количество единиц
-              input.input__area(type="tel" name="count")
-          .form__input.input.--gray
-            .input__wrap
-              .input__title Укажите необходимый диаметр
-              input.input__area(type="tel" name="size")
-          .form__input.input.--gray
-            .input__wrap
-              .input__title Ваше имя
-              input.input__area(type="text" name="name")
-          .form__input.input.--gray.--phone
-            .input__wrap
-              .input__title Телефон
-              input.input__area(type="tel" name="phone")
-          button.form__btn.btn.--md.--b-blue отправить
+        .form__title заявка на поставку
+        .form__inner.row
+          .form__field.field.--md.--gray
+            .field__wrap
+              .field__placeholder Количество единиц
+              input.field__area(type="tel" name="count")
+          .form__field.field.--md.--gray
+            .field__wrap
+              .field__placeholder Укажите необходимый диаметр
+              input.field__area(type="tel" name="size")
+          .form__field.field.--md.--gray
+            .field__wrap
+              .field__placeholder Ваше имя
+              input.field__area(type="text" name="name")
+          .form__field.field.--md.--gray.--phone
+            .field__wrap
+              .field__placeholder Телефон
+              input.field__area(type="tel" name="phone")
+          button.form__button.button.--md.--b-blue #[span отправить]
 
   .modal.--md#modal-thanks
     .modal__close
     .modal__inner
       .thanks
-        .thanks__title спасибо за оформленную заявку, мы свяжемся с вами  в ближайшее время
+        .thanks__title спасибо за оформленную заявку, <br>мы свяжемся с вами <br>в ближайшее время
         .thanks__icon
-          img(src="" alt="")
+          img(src="uploads/icons/partnership.png" alt="")

@@ -747,3 +747,100 @@
   &__dev
     span
       color: $blue
+
+
+.modal
+  display: none
+  z-index: 1
+  position: relative
+  background: #FBFBFB
+  overflow: hidden
+  &.--md
+    width: 905px
+    min-height: 410px
+    padding: 115px 160px 95px
+  &__close
+    opacity: 0.3
+    position: absolute
+    top: 40px
+    right: 45px
+    width: 22px
+    height: 22px
+    transition: .3s
+    cursor: pointer
+    &:before, &:after
+      content: ''
+      width: 28px
+      height: 4px
+      position: absolute
+      top: 50%
+      left: 50%
+      transition: .3s
+      background: #363838
+    &:before
+      transform: translate(-50%, -50%) rotate(45deg)
+    &:after
+      transform: translate(-50%, -50%) rotate(-45deg)
+    &:hover
+      opacity: 1
+      &:before, &:after
+        background: $blue
+
+
+
+.form
+  width: 100%
+  max-width: 555px
+  margin: 0 auto
+  &__main
+    opacity: 0.07
+    top: 11px
+    left: 0
+    // color: #00364E
+    color: #C4C4C4
+  &__subtitle
+    margin-left: 0
+    margin-bottom: 35px
+  &__title
+    margin-left: 0
+    font-size: 51px
+    line-height: 1
+    font-weight: 500
+    color: $blue
+    letter-spacing: 0.045em
+    text-transform: uppercase
+    white-space: nowrap
+    margin-bottom: 120px
+  &__inner
+    margin-left: -20px
+    margin-right: -20px
+  &__field
+    width: calc(100% / 2 - 40px)
+    margin-left: 20px
+    margin-right: 20px
+    margin-bottom: 42px
+  &__button
+    margin-top: 26px
+    margin-left: auto
+    margin-right: 20px
+
+.thanks
+  padding-top: 10px
+  &__title
+    text-align: center
+    font-size: 23px
+    font-weight: 500
+    line-height: 1
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    max-width: 450px
+    margin: 0 auto 18px
+    background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+  &__icon
+    margin-bottom: -35px
+    img
+      margin: 0 auto
