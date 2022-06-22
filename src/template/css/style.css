@@ -170,6 +170,143 @@ img, svg, path, circle, rect, line {
   margin-left: auto;
 }
 
+.button {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Futura PT", sans-serif;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  transition: 0.3s;
+  outline: none;
+  border-bottom: none;
+}
+.button.--md {
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.button.--b-blue {
+  flex-direction: column;
+}
+.button.--b-blue:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 7px;
+  margin-top: 13px;
+  background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%);
+}
+.button.--b-blue span {
+  background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.field__wrap {
+  position: relative;
+  cursor: text;
+}
+.field__area {
+  display: block;
+  font-size: 20px;
+  font-family: "Futura PT", sans-serif;
+  width: 100%;
+  overflow: hidden;
+  resize: none;
+  transition: 0.3s;
+}
+.field__area::placeholder {
+  opacity: 0;
+}
+.field__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.field.--md .field__wrap {
+  padding-bottom: 19px;
+}
+.field.--md .field__area, .field.--md .field__placeholder {
+  font-size: 17px;
+  line-height: 1.25;
+}
+.field.--md.--textarea .field__area {
+  height: 63px;
+}
+.field.--gray .field__placeholder {
+  opacity: 0.3;
+}
+.field.--gray .field__wrap {
+  border-bottom: 2px solid #AEBFC6;
+}
+.field.--gray .field__wrap:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  bottom: -2px;
+  height: 3px;
+  transition: 0.3s;
+  background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%);
+}
+.field.--filled.--md .field__placeholder, .field.--focus.--md .field__placeholder {
+  font-size: 13px;
+  top: -18px;
+}
+.field.--filled.--gray .field__wrap:after, .field.--focus.--gray .field__wrap:after {
+  width: 80%;
+}
+
+.check {
+  cursor: pointer;
+}
+.check__input {
+  display: none;
+}
+.check__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%);
+}
+.check__box svg {
+  opacity: 0;
+  transform: scale(0);
+}
+.check.--md .check__box {
+  width: 14px;
+  height: 14px;
+}
+.check.--md .check__box svg {
+  margin-left: 1px;
+}
+.check.--md .check__title {
+  margin-left: 19px;
+  margin-top: 1px;
+  font-size: 11px;
+  line-height: 17px;
+  font-weight: 300;
+  opacity: 0.3;
+}
+.check.--checked .check__box svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .tal {
   text-align-last: left;
 }
@@ -805,6 +942,7 @@ img, svg, path, circle, rect, line {
 
 .consult {
   padding-top: 220px;
+  padding-bottom: 180px;
 }
 .consult__main {
   margin-top: -125px;
@@ -838,7 +976,181 @@ img, svg, path, circle, rect, line {
 .consult__form {
   margin: 0 -20px -80px;
 }
-.consult__input, .consult__textarea {
+.consult__field {
   width: calc(50% - 40px);
   margin: 0 20px 80px;
+}
+.consult__grp {
+  width: 125px;
+  margin-left: auto;
+}
+.consult__check {
+  margin-top: 28px;
+}
+
+.geo {
+  padding-top: 100px;
+  padding-bottom: 85px;
+}
+.geo__main {
+  top: -100px;
+}
+.geo__subtitle {
+  margin-bottom: 42px;
+  max-width: 465px;
+  white-space: normal;
+}
+.geo__title {
+  margin-bottom: 46px;
+}
+.geo__map {
+  margin-left: -8px;
+  width: 1361px;
+}
+
+.news {
+  padding-top: 125px;
+  padding-bottom: 155px;
+}
+.news__main {
+  margin-top: -125px;
+}
+.news__subtitle {
+  margin-bottom: 35px;
+}
+.news__title {
+  margin-bottom: 162px;
+}
+.news__slider {
+  overflow: visible;
+}
+.news__item {
+  display: flex;
+  align-items: center;
+  width: 590px;
+  opacity: 0.1;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.news__item.swiper-slide-active, .news__item.swiper-slide-next {
+  opacity: 1;
+  pointer-events: auto;
+}
+.news__item:hover .news__item-img:before {
+  opacity: 0;
+}
+.news__item:hover .news__item-title {
+  color: #0567C3;
+}
+.news__item-img {
+  position: relative;
+  width: 295px;
+  height: 438px;
+}
+.news__item-img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+  background: linear-gradient(0deg, rgba(87, 118, 147, 0.5), rgba(87, 118, 147, 0.5));
+}
+.news__item-content {
+  width: calc(100% - 295px);
+  padding: 40px 60px 40px 40px;
+}
+.news__item-title {
+  line-height: 1.19;
+  font-weight: 700;
+  color: #9091A9;
+  margin-bottom: 28px;
+  letter-spacing: 3px;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+.news__item-date {
+  opacity: 0.7;
+  font-size: 17px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.footer__top {
+  padding-top: 55px;
+  padding-bottom: 40px;
+  background: #F9F9F9;
+}
+.footer__top .lines div {
+  opacity: 1;
+  background: #F3F3F3;
+}
+.footer__left {
+  width: 590px;
+}
+.footer__mid {
+  width: 295px;
+}
+.footer__right {
+  width: 295px;
+}
+.footer__phone {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.footer__phone a {
+  color: #9091A9;
+}
+.footer__email {
+  line-height: 1.64;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1px;
+}
+.footer__email a {
+  color: #9091A9;
+}
+.footer__address {
+  line-height: 26px;
+  color: #9091A9;
+  text-transform: uppercase;
+  padding-top: 36px;
+  font-weight: 900;
+}
+.footer__socials {
+  margin-top: 56px;
+}
+.footer__bot {
+  padding-top: 37px;
+  padding-bottom: 12px;
+  color: #9091A9;
+  font-size: 12px;
+  line-height: 1.64;
+}
+.footer__bot a {
+  color: #9091A9;
+}
+.footer__bot-wrap {
+  align-items: center;
+}
+.footer__policy, .footer__dev {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.footer__policy a, .footer__dev a {
+  border-color: #9091A9;
+  border-color: rgba(144, 145, 169, 0.5);
+}
+.footer__policy a:hover, .footer__dev a:hover {
+  color: #0567C3;
+  border-color: rgba(5, 103, 195, 0.5);
+}
+.footer__dev span {
+  color: #0567C3;
 }

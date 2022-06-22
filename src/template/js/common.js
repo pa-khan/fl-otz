@@ -60,6 +60,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	if (fields) {
 		fields.forEach((field)=>{
 			new Field(field);
+
+      if (field.classList.contains('--phone')) {
+        IMask(field.area, {
+          mask: '+{7} (000) 000-00-00'
+        });
+      }
 		});
 	}
 
@@ -90,5 +96,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			}
 		})
 	}
+
+
+  const newsSlider = document.querySelector('.news__slider');
+  if (newsSlider) {
+    new Swiper(newsSlider, {
+      slidesPerView: 'auto'
+    });
+  }
 
 });

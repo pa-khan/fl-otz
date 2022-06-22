@@ -3,9 +3,9 @@
 @import reset
 @import grid
 
-// @import ../components/button/button
-// @import ../components/field/field
-// @import ../components/check/check
+@import ../components/button/button
+@import ../components/field/field
+@import ../components/check/check
 // @import ../components/select/select
 // @import ../components/popup/popup
 // @import ../components/tabs/tabs
@@ -576,6 +576,7 @@
       
 .consult
   padding-top: 220px
+  padding-bottom: 180px
   &__main
     margin-top: -125px
   &__subtitle
@@ -599,6 +600,150 @@
     margin-bottom: 90px
   &__form
     margin: 0 -20px -80px
-  &__input, &__textarea
+  &__field
     width: calc(100% / 2 - 40px)
     margin: 0 20px 80px
+  &__grp
+    width: 125px
+    margin-left: auto
+  &__check
+    margin-top: 28px
+
+
+.geo
+  padding-top: 100px
+  padding-bottom: 85px
+  &__main
+    top: -100px
+  &__subtitle
+    margin-bottom: 42px
+    max-width: 465px
+    white-space: normal
+  &__title
+    margin-bottom: 46px
+  &__map
+    margin-left: -8px
+    width: 1361px
+
+.news
+  padding-top: 125px
+  padding-bottom: 155px
+  &__main
+    margin-top: -125px
+  &__subtitle
+    margin-bottom: 35px
+  &__title
+    margin-bottom: 162px
+  &__slider
+    overflow: visible
+  &__item
+    display: flex
+    align-items: center
+    width: 590px
+    opacity: 0.1
+    pointer-events: none
+    transition: .3s
+    &.swiper-slide-active, &.swiper-slide-next
+      opacity: 1
+      pointer-events: auto
+    &:hover
+      .news
+        &__item
+          &-img
+            &:before
+              opacity: 0
+          &-title
+            color: $blue
+    &-img
+      position: relative
+      width: 295px
+      height: 438px
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        transition: .3s
+        background: linear-gradient(0deg, rgba(87, 118, 147, 0.5), rgba(87, 118, 147, 0.5))
+    &-content
+      width: calc(100% - 295px)
+      padding: 40px 60px 40px 40px
+    &-title
+      line-height: 1.19
+      font-weight: 700
+      color: #9091A9
+      margin-bottom: 28px
+      letter-spacing: 3px
+      transition: .3s
+      text-transform: uppercase
+    &-date
+      opacity: 0.7
+      font-size: 17px
+      line-height: 1.25
+      text-transform: uppercase
+
+.footer
+  &__top
+    padding-top: 55px
+    padding-bottom: 40px
+    background: #F9F9F9
+    .lines
+      div
+        opacity: 1
+        background: #F3F3F3
+  &__left
+    width: 590px
+  &__mid
+    width: 295px
+  &__right
+    width: 295px
+  &__phone
+    font-size: 36px
+    line-height: 1.5
+    font-weight: 900
+    letter-spacing: 2px
+    text-transform: uppercase
+    margin-bottom: 2px
+    a
+      color: #9091A9
+  &__email
+    line-height: 1.64
+    font-weight: 900
+    letter-spacing: 2px
+    text-transform: uppercase
+    margin-bottom: 1px
+    a
+      color: #9091A9
+  &__address
+    line-height: 26px
+    color: #9091A9
+    text-transform: uppercase
+    padding-top: 36px
+    font-weight: 900
+  &__socials
+    margin-top: 56px
+  &__bot
+    padding-top: 37px
+    padding-bottom: 12px
+    color: #9091A9
+    font-size: 12px
+    line-height: 1.64
+    a
+      color: #9091A9
+    &-wrap
+      align-items: center
+  &__policy, &__dev
+    letter-spacing: 1px
+    text-transform: uppercase
+    a
+      border-color: #9091A9
+      border-color: rgba(#9091A9, 0.5)
+      &:hover
+        color: $blue
+        border-color: rgba($blue, 0.5)
+    
+  &__dev
+    span
+      color: $blue

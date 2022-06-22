@@ -1,7 +1,35 @@
 @import ../../sass/vars
 
 .check
-	display: inline-flex
-	cursor: pointer
-	&__input
-		display: none
+  cursor: pointer
+  &__input
+    display: none
+  &__box
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
+    svg
+      opacity: 0
+      transform: scale(0)
+  &.--md
+    .check
+      &__box
+        width: 14px
+        height: 14px
+        svg
+          margin-left: 1px
+      &__title
+        margin-left: 19px
+        margin-top: 1px
+        font-size: 11px
+        line-height: 17px
+        font-weight: 300
+        opacity: .3
+
+  &.--checked
+    .check
+      &__box
+        svg
+          opacity: 1
+          transform: scale(1)

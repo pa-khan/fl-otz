@@ -14,3 +14,44 @@
 .field__area::placeholder {
   opacity: 0;
 }
+.field__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.field.--md .field__wrap {
+  padding-bottom: 19px;
+}
+.field.--md .field__area, .field.--md .field__placeholder {
+  font-size: 17px;
+  line-height: 1.25;
+}
+.field.--md.--textarea .field__area {
+  height: 63px;
+}
+.field.--gray .field__placeholder {
+  opacity: 0.3;
+}
+.field.--gray .field__wrap {
+  border-bottom: 2px solid #AEBFC6;
+}
+.field.--gray .field__wrap:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  bottom: -2px;
+  height: 3px;
+  transition: 0.3s;
+  background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%);
+}
+.field.--filled.--md .field__placeholder, .field.--focus.--md .field__placeholder {
+  font-size: 13px;
+  top: -18px;
+}
+.field.--filled.--gray .field__wrap:after, .field.--focus.--gray .field__wrap:after {
+  width: 80%;
+}

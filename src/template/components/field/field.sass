@@ -14,3 +14,51 @@
     transition: $t
     &::placeholder
       opacity: 0
+  &__placeholder
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    white-space: nowrap
+    transition: .3s
+  &.--md
+    .field
+      &__wrap
+        padding-bottom: 19px
+      &__area, &__placeholder
+        font-size: 17px
+        line-height: 1.25
+    &.--textarea
+      .field
+        &__area
+          height: 63px
+  &.--gray
+    .field
+      &__placeholder
+        opacity: 0.3
+      &__wrap
+        border-bottom: 2px solid #AEBFC6
+        &:after
+          content: ''
+          position: absolute
+          left: 0
+          width: 0
+          bottom: -2px
+          height: 3px
+          transition: .3s
+          background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
+
+  &.--filled, &.--focus
+    &.--md
+      .field
+        &__placeholder
+          font-size: 13px
+          top: -18px
+    &.--gray
+      .field
+        &__wrap
+          &:after
+            width: 80%
+        
+      
+

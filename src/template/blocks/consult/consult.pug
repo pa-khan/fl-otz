@@ -10,24 +10,25 @@ include ../../pug/vars
         .consult__desc Оставьте заявку и мы с вами свяжемся в ближайшее время
       .consult__right
         .consult__form.row
-          .consult__input.input.--gray
-            .input__wrap
-              .input__title Ваше имя
-              input.input__area(type="text" name="name")
-          .consult__input.input.--gray.--phone
-            .input__wrap
-              .input__title Телефон
-              input.input__area(type="tel" name="phone")
-          .consult__textarea.textarea.--gray
-            .textarea__wrap
-              .textarea__title Сообщение
-              textarea.textarea__area(name="message")
+          .consult__field.field.--md.--gray
+            .field__wrap
+              .field__placeholder Ваше имя
+              input.field__area(type="text" name="name")
+          .consult__field.field.--md.--gray.--phone
+            .field__wrap
+              .field__placeholder Телефон
+              input.field__area(type="tel" name="phone")
+          .consult__field.field.--md.--gray.--textarea
+            .field__wrap
+              .field__placeholder Сообщение
+              textarea.field__area(name="message")
           .consult__grp
-            button.consult__btn.btn.--md.--b-blue отправить
-            .consult__check.check
+            button.consult__button.button.--md.--b-blue #[span отправить]
+            .consult__check.check.--md
               input.check__input(type="checkbox" name="policy" checked="checked")
               .check__wrap
                 .check__box
+                  <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.015625 4.30625L1.24063 3.08125L2.94688 4.89312L7.27813 0.5L8.50313 1.725L2.94688 7.36875L0.015625 4.30625Z" fill="white"/> </svg>
                 .check__title Я согласен с политикой конфиденциальности
 
   .lines

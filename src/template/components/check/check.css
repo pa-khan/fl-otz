@@ -1,7 +1,35 @@
 .check {
-  display: inline-flex;
   cursor: pointer;
 }
 .check__input {
   display: none;
+}
+.check__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%);
+}
+.check__box svg {
+  opacity: 0;
+  transform: scale(0);
+}
+.check.--md .check__box {
+  width: 14px;
+  height: 14px;
+}
+.check.--md .check__box svg {
+  margin-left: 1px;
+}
+.check.--md .check__title {
+  margin-left: 19px;
+  margin-top: 1px;
+  font-size: 11px;
+  line-height: 17px;
+  font-weight: 300;
+  opacity: 0.3;
+}
+.check.--checked .check__box svg {
+  opacity: 1;
+  transform: scale(1);
 }

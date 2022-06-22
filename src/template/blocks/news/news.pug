@@ -2,34 +2,31 @@ include ../../pug/vars
 
 .news.sec
   .case
-    .news__main.h0 GEO MAP
-    .news__subtitle.h2 доставка осуществляется по России и странам СНГ
-    .news__title.h1 География
+    .news__main.h0 NEWS
+    .news__subtitle.h2 актуально сейчас
+    .news__title.h1 новости
     -
       news = [
         {
           title: 'ЗАВЕРШЁННЫЙ ОБЪЕКТ  В ЖК НОВЫЙ ВЕК',
           date: '9 Мая, 2022',
-          img: '',
         },
         {
           title: 'ЗАВЕРШЁННЫЙ ОБЪЕКТ  В ЖК НОВЫЙ ВЕК',
           date: '9 Мая, 2022',
-          img: '',
         },
         {
           title: 'ЗАВЕРШЁННЫЙ ОБЪЕКТ  В ЖК НОВЫЙ ВЕК',
           date: '9 Мая, 2022',
-          img: '',
         },
       ]
     if news
       .news__slider.swiper
         .news__list.swiper-wrapper
-          each item in news
-            .news__item.swiper-slide
+          each item, index in news
+            a.news__item.swiper-slide(href="news-item.html")
               .news__item-img.img
-                img(src=item.img alt="")
+                img(src='uploads/news/news-' + (index + 1) + '.jpg' alt="")
               .news__item-content
                 .news__item-title=item.title
                 .news__item-date=item.date

@@ -8,6 +8,7 @@ html(lang="ru")
     title=title
   body
     .wrap
+      link(rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
       link(rel="stylesheet" href="template/css/style.css" + version)
 
       include ../../blocks/header/header
@@ -17,5 +18,8 @@ html(lang="ru")
 
       include ../../blocks/footer/footer
 
+      +script('field', 'components')
       +script('check', 'components')
+      script(src="https://unpkg.com/imask")
+      script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
       script(src="template/js/common.js" + version)
