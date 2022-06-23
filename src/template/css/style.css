@@ -2156,3 +2156,37 @@ img, svg, path, circle, rect, line {
   text-transform: uppercase;
   margin-bottom: 25px;
 }
+
+.news-item__inner {
+  padding-top: 155px;
+  padding-bottom: 140px;
+}
+.news-item__main {
+  top: 25px;
+}
+.news-item__subtitle {
+  margin-bottom: 35px;
+}
+.news-item__title {
+  margin-bottom: 90px;
+}
+.news-item__img {
+  width: 100%;
+  height: 690px;
+}
+.news-item__text {
+  padding-top: 65px;
+  font-weight: 400;
+  color: #727474;
+}
+.news-item__text u {
+  color: #0567C3;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.news-item__text p {
+  margin-bottom: 17px;
+}
+.news-item__text p:last-child {
+  margin-bottom: 0;
+}
