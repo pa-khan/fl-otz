@@ -2,19 +2,20 @@ include ../../pug/vars
 
 .advantages.sec(class=advantagesClass)
   .case
-    .advantages__main.h0= advantagesMain ? advantagesMain : 'BEST OF'
-    .advantages__subtitle.h2= advantagesSubtitle ? advantagesSubtitle : 'актуально в данный момент' 
-    .advantages__title.h1= advantagesTitle ? advantagesTitle : 'преимущества'  
-    .advantages__list.row
-      if (advantages)
-        each item, index in advantages
-          .advantages__item.advantage
-            if advantagesType == 'steps'
-              .advantage__head
-                .advantage__count=item.count
-                .advantage__name=item.name
-            else
-              .advantage__value= '0' + (index + 1)
-              .advantage__title!=item.title
-            .advantage__text!=item.text
+    .advantages__inner
+      .advantages__main.h0= advantagesMain ? advantagesMain : 'BEST OF'
+      .advantages__subtitle.h2= advantagesSubtitle ? advantagesSubtitle : 'актуально в данный момент' 
+      .advantages__title.h1= advantagesTitle ? advantagesTitle : 'преимущества'  
+      .advantages__list.row
+        if (advantages)
+          each item, index in advantages
+            .advantages__item.advantage
+              if advantagesType == 'steps'
+                .advantage__head
+                  .advantage__count=item.count
+                  .advantage__name=item.name
+              else
+                .advantage__value= '0' + (index + 1)
+                .advantage__title!=item.title
+              .advantage__text!=item.text
   .lines

@@ -6,9 +6,11 @@ include ../../pug/vars
     .certs__subtitle.h2 в соответствии с ГОСТ 30732-2020.
     .certs__title.h1 сертификаты
     .certs__list.row
-      a.certs__item(href="")
-        .certs__item-img
-          img(src="" alt="")
-        .certs__item-name СЕРТИФИКАТ БЕЗОПАСНОТИ
-        .certs__item-desc в соответствии с ГОСТ 30732-2020
+      each item, index in [1, 2, 3, 4]
+        a.certs__item(href="uploads/news-item.jpg" data-fancybox="")
+          .certs__item-img
+            img(src="uploads/icons/certificate-gray.svg" alt="")
+            img(src="uploads/icons/certificate-blue.svg" alt="")
+          .certs__item-name СЕРТИФИКАТ БЕЗОПАСНОТИ
+          .certs__item-desc в соответствии <br>с ГОСТ 30732-2020
   .lines

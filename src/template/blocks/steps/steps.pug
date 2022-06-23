@@ -9,44 +9,44 @@ include ../../pug/vars
       -
         steps = [
           {
-            img: 'uploads/steps/',
-            text: 'Участок по производству ПЭ и Участок по производству трубы пнд ду 110мм-450мм'
+            img: 'uploads/steps/step-1.png',
+            text: 'Участок по производству ПЭ <br>и Участок по производству <br>трубы пнд ду 110мм-450мм'
           },
           {
-            img: 'uploads/steps/',
-            text: 'Участок по производству ОЦ оболочки  для труб ППУ '
+            img: 'uploads/steps/step-2.png',
+            text: 'Участок по производству ОЦ <br>оболочки <br>для труб ППУ '
           },
           {
-            img: 'uploads/steps/',
-            text: 'Сборка и заливка труб в ППУ'
+            img: 'uploads/steps/step-3.png',
+            text: 'Сборка и заливка <br>труб в ППУ'
           },
           {
-            img: 'uploads/steps/',
+            img: 'uploads/steps/step-4.png',
             text: 'Сварочный цех. Сварщики работают  на оборудовании бесконтактной сварки и имеют аттестацию НАКС'
           },
           {
-            img: 'uploads/steps/',
-            text: 'Цех сборки и изоляции фасонных изделий в ППУ'
+            img: 'uploads/steps/step-5.png',
+            text: 'Цех сборки и изоляции <br>фасонных изделий в ППУ'
           },
           {
-            img: 'uploads/steps/',
-            text: 'Участок по производству термомуфт  и комплектующих'
+            img: 'uploads/steps/step-6.png',
+            text: 'Участок по производству <br>термомуфт <br>и комплектующих'
           },
           {
-            img: 'uploads/steps/',
-            text: 'Участок по производству трубы пнд ду 20мм-63мм'
+            img: 'uploads/steps/step-7.png',
+            text: 'Участок по производству <br>трубы пнд ду 20мм-63мм'
           },
           {
-            img: 'uploads/steps/',
-            text: 'Цех по производству скорлупы ППУ'
+            img: 'uploads/steps/step-8.png',
+            text: 'Цех по производству <br>скорлупы ППУ'
           },
           {
-            img: 'uploads/steps/',
-            text: 'Участок по изоляции ВУС на основе экструдированного полиэтилена'
+            img: 'uploads/steps/step-9.png',
+            text: 'Участок по изоляции ВУС на <br>основе экструдированного <br>полиэтилена'
           },
           {
-            img: 'uploads/steps/',
-            text: 'Лаборатория для проверки и контроля качества сырья и готовой продукции'
+            img: 'uploads/steps/step-10.png',
+            text: 'Лаборатория для проверки <br>и контроля качества сырья и <br>готовой продукции'
           },
         ]
       if steps
@@ -58,10 +58,10 @@ include ../../pug/vars
             .steps__control #[div.steps__dot]
             .steps__content
               .steps__count= counter < 10 ? '0' + counter : counter
-              .steps__text= step.text
+              .steps__text!= step.text
 
       .steps__feedback
-        a.steps__feedback-btn.btn.--md.--b-blue(href="") связаться с нами
+        a.steps__feedback-btn.button.--md.--b-blue(href="#modal-order" data-fancybox="") #[span связаться с нами]
         .steps__feedback-dot.steps__dot
 
 
