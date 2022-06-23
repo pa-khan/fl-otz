@@ -1,44 +1,47 @@
 include ../../pug/vars
 
-.contacts.sec
+.contacts.sec.first
   .case
-    .contacts__main.h0 CONTACT
-    .contacts__subtitle.h2 #[a(href="mailto:zavod@otz-petal.ru") zavod@otz-petal.ru]
-    .contacts__title.h1 #[a(href="tel:+73812382322") 8 (3812) 38•23•22]
-    .contacts__wrap.row
-      .contacts__content
-        .contacts__list
-          .contacts__item.contact.--full
-            .contact__title адрес
-            .contact__inner
-              p 644036, г. Омск, <br>ул. 1-я Казахстанская, 30
-          .contacts__item.contact
-            .contact__title График работы
-            .contact__inner
-              p ПН-ПТ:  с 9:00 до 18:00
-              p Обед     с 12:00 до 13:00
-          .contacts__item.contact
-            .contact__title реквезиты
-            .contact__inner
-              p ООО ОТЗ ПЕТАЛ
-              p ИНН: 0000000000000
-              p ОГРН: 000000000000
-              p Банк: СБЕР БАНК
-              p БИК: 000000000000000
-              p Р/С: 00000000000000
-          .contacts__item.contact.--full
-            .contact__title Погрка-разгрузка
-            .contact__inner
-              p ПН-ПТ:  с 9:00 до 17:00
-              p Обед     с 12:00 до 13:00
-        .contacts__feedback.feedback
-          a.feedback__btn.btn.--md.--b-blue
-          .feedback__check.check
-            input.check__input(type="checkbox" name="policy" checked="checked")
-            .check__wrap
-              .check__box
-              .check__title Я согласен с политикой конфиденциальности
-      .contacts__map.map#map
+    .contacts__inner
+      .contacts__main.h0 CONTACT
+      .contacts__subtitle.h2 #[a(href="mailto:zavod@otz-petal.ru") zavod@otz-petal.ru]
+      .contacts__title.h1 #[a(href="tel:+73812382322") 8 (3812) 38•23•22]
+      .contacts__wrap.row
+        .contacts__content
+          .contacts__list
+            .contacts__item.contact.--full
+              .contact__title адрес
+              .contact__inner
+                p 644036, г. Омск, <br>ул. 1-я Казахстанская, 30
+            .contacts__item.contact
+              .contact__title График работы
+              .contact__inner
+                p ПН-ПТ:  с 9:00 до 18:00
+                p Обед     с 12:00 до 13:00
+            .contacts__item.contact
+              .contact__title реквезиты
+              .contact__inner
+                p ООО ОТЗ ПЕТАЛ
+                p ИНН: 0000000000000
+                p ОГРН: 000000000000
+                p Банк: СБЕР БАНК
+                p БИК: 000000000000000
+                p Р/С: 00000000000000
+            .contacts__item.contact.--full
+              .contact__title Погрузка-разгрузка
+              .contact__inner
+                p ПН-ПТ:  с 9:00 до 17:00
+                p Обед     с 12:00 до 13:00
+          .contacts__feedback.feedback
+            a.feedback__btn.button.--md.--b-blue(href="#modal-order" data-fancybox="") #[span связаться с нами]
+            .feedback__check.check.--md
+              input.check__input(type="checkbox" name="policy" checked="checked")
+              .check__wrap
+                .check__box
+                  <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.015625 4.30625L1.24063 3.08125L2.94688 4.89312L7.27813 0.5L8.50313 1.725L2.94688 7.36875L0.015625 4.30625Z" fill="white"/> </svg>
+                .check__title Я согласен с политикой конфиденциальности
+        .contacts__map.map#map(data-position="54.916097, 73.297389")
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
 
   .lines
     

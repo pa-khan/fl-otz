@@ -107,4 +107,32 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
   }
 
+  let map = document.getElementById('map');
+  ymaps.ready(function () {
+      var coords = map.getAttribute('data-position').split(', ');
+      
+      coords = coords.map((coord)=>{
+        return Number(coord);
+      });
+
+
+      console.log(coords);
+
+      var myMap = new ymaps.Map(map, {
+        center: coords,
+        zoom: 15,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      });
+
+      let placemark = new ymaps.Placemark(coords, { }, {
+        iconLayout: 'default#image',
+        iconImageHref: 'uploads/icons/placemark.png',
+        iconImageSize: [67, 83],
+        iconImageOffset: [-33, -42],
+      });
+
+      myMap.geoObjects.add(placemark);
+  });
 });

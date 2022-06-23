@@ -46,6 +46,8 @@
   text-transform: uppercase
   color: $blue
   margin-left: 290px
+  a
+    color: $blue
 
 .h2
   font-size: 18px
@@ -55,6 +57,8 @@
   color: #277885
   margin-left: 295px
   white-space: nowrap
+  a
+    color: #277885
 
 
 .sec
@@ -1571,3 +1575,47 @@
     &-name
       font-weight: 600
       margin-bottom: 10px
+
+
+.contacts
+  &__inner
+    padding-top: 160px
+    padding-bottom: 140px
+  &__main
+    top: 40px
+  &__subtitle
+    margin-bottom: 35px
+  &__title
+    margin-bottom: 175px
+  &__content
+    width: 590px
+  &__list
+    display: flex
+    flex-wrap: wrap
+  &__item
+    width: 50%
+    margin-bottom: 50px
+    &.--full
+      width: 100%
+  &__map
+    width: calc(590px + 200px)
+    margin-right: -200px
+    [class*="ymaps-2"][class*="-ground-pane"]
+      filter: grayscale(100%)
+      -webkit-filter: grayscale(100%)
+      -moz-filter: grayscale(100%)
+      -ms-filter: grayscale(100%)
+      -o-filter: grayscale(100%)
+      filter: gray
+
+
+.contact
+  &__title
+    font-size: 20px
+    line-height: 1.05
+    font-weight: 700
+    color: #9091A9
+    letter-spacing: 3px
+    text-transform: uppercase
+    margin-bottom: 25px
+  
