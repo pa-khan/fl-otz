@@ -10,8 +10,8 @@ block content
   -
     product = {
       title: 'Трубы полиэтиленовые',
-      gost: 'в соответствии  с ГОСТ 30732-2020',
-      img: 'uploads/',
+      gost: 'в соответствии  с ГОСТ 18599',
+      img: 'uploads/polyethylene.svg',
       text: '<p>ОТЗ «Петал» является производителем напорных полиэтиленовых труб (трубы ПНД) из полиэтилена низкого давления.</p>',
       infos: {
         left: [
@@ -28,18 +28,17 @@ block content
     }
   include ../../../blocks/product/product
 
-  include ../../../blocks/info/info
-
   -
     images = [
-      'uploads/',
-      'uploads/',
-      'uploads/',
-      'uploads/',
-      'uploads/',
+      'uploads/polyethylene/polyethylene-1.jpg',
+      'uploads/polyethylene/polyethylene-2.jpg',
+      'uploads/polyethylene/polyethylene-3.jpg',
+      'uploads/polyethylene/polyethylene-4.jpg',
+      'uploads/polyethylene/polyethylene-5.jpg',
     ]
   include ../../../blocks/images/images
 
+  include ../../../blocks/order/order
 
   -
     props = [
@@ -56,7 +55,7 @@ block content
         title: 'не требуют катодной защиты',
       },
       {
-        title: 'Растягиваются  до 7%',
+        title: 'Растягиваются <br>до 7%',
         desc: 'Без потери своих качеств '
       },
       {
@@ -64,7 +63,7 @@ block content
         desc: 'На 25-30% выше, чем у стальной, при одинаковом диаметре'
       },
       {
-        title: 'Растягиваются  до 7%',
+        title: 'Растягиваются <br>до 7%',
         desc: 'Без потери своих качеств '
       },
       {
@@ -75,47 +74,42 @@ block content
   include ../../../blocks/props/props
 
 
-  .data
+  .data.sec
     .case
-      table.data__table
+      table.data__table.--f-col.--bt
         thead
           tr
-            th Наружный  диаметр  трубы, мм.
+            th Наружный <br>диаметр <br>трубы, мм.
             th
               p SDR 9 <br>(20 атм)
               div
                 div толщина стенок, мм
-                div масса 1 п/м, кг.
+                div масса <br>1 п/м, кг.
             th
               p SDR 11 <br>(16 атм)
               div
                 div толщина стенок, мм
-                div масса 1 п/м, кг.
-            th
-              p SDR 11 <br>(16 атм)
-              div
-                div толщина стенок, мм
-                div масса 1 п/м, кг.
+                div масса <br>1 п/м, кг.
             th
               p SDR 13,6 <br>(12,5 атм)
               div
                 div толщина стенок, мм
-                div масса 1 п/м, кг.
+                div масса <br>1 п/м, кг.
             th
               p SDR 17 <br>(10 атм)
               div
                 div толщина стенок, мм
-                div масса 1 п/м, кг.
+                div масса <br>1 п/м, кг.
             th
               p SDR 21 <br>(8 атм)
               div
                 div толщина стенок, мм
-                div масса 1 п/м, кг.
+                div масса <br>1 п/м, кг.
             th
               p SDR 26 <br>(6,3 атм)
               div
                 div толщина стенок, мм
-                div масса 1 п/м, кг.
+                div масса <br>1 п/м, кг.
         tbody
           tr
             td
@@ -630,6 +624,7 @@ block content
               div
                 div 
                 div 
+    .lines
 
   -
     advantages = [

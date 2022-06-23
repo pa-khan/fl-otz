@@ -1,17 +1,18 @@
 include ../../pug/vars
 
-.props.sec
-  .case
-    .props__wrap.row
-      .props__main.h0 BEST OF
-      .props__subtitle.h2 преимущества
-      .props__title.h1 Свойства полиэтиленовых труб
-      if props
-        .props__list
-          each item, index in props
-            .props__item
-              .props__item-count= '0' + index
-              .props__item-title=item.title
-              .props__item-text=item.text
+.props
+  .props__inner.sec
+    .case
+      .props__wrap
+        .props__main.h0 BEST OF
+        .props__subtitle.h2 преимущества
+        .props__title.h1 Свойства полиэтиленовых труб
+        if props
+          .props__list
+            each item, index in props
+              .props__item
+                .props__item-count= '0' + (index + 1)
+                .props__item-title!=item.title
+                .props__item-text!=item.desc
 
-  .lines
+    .lines

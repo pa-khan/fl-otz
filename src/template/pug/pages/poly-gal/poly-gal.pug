@@ -11,7 +11,7 @@ block content
     product = {
       title: 'Трубы-оболочки полиэтиленовые  и оцинкованные',
       gost: 'в соответствии  с ГОСТ 30732-2020',
-      img: 'uploads/',
+      img: 'uploads/poly-gal.svg',
       text: '',
       infos: {
         left: [
@@ -35,51 +35,18 @@ block content
     }
   include ../../../blocks/product/product
 
-  include ../../../blocks/info/info
-
   -
     images = [
-      'uploads/',
-      'uploads/',
-      'uploads/',
-      'uploads/',
-      'uploads/',
+      'uploads/poly-gal/poly-gal-1.jpg',
+      'uploads/poly-gal/poly-gal-2.jpg',
+      'uploads/poly-gal/poly-gal-3.jpg',
+      'uploads/poly-gal/poly-gal-4.jpg',
+      'uploads/poly-gal/poly-gal-4.jpg',
     ]
   include ../../../blocks/images/images
 
 
-  -
-    props = [
-      {
-        title: 'не изнашиваются',
-      },
-      {
-        title: 'не поддаются коррозии',
-      },
-      {
-        title: 'не боятся контакта с водой и агрессивными средами',
-      },
-      {
-        title: 'не требуют катодной защиты',
-      },
-      {
-        title: 'Растягиваются  до 7%',
-        desc: 'Без потери своих качеств '
-      },
-      {
-        title: 'Долговечны',
-        desc: 'На 25-30% выше, чем у стальной, при одинаковом диаметре'
-      },
-      {
-        title: 'Растягиваются  до 7%',
-        desc: 'Без потери своих качеств '
-      },
-      {
-        title: 'высокая Пропускная способность ',
-        desc: 'На 25-30% выше, чем у стальной, при одинаковом диаметре'
-      },
-    ]
-  include ../../../blocks/props/props
+  include ../../../blocks/order/order
 
 
   .data

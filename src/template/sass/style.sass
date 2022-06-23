@@ -180,7 +180,7 @@
     z-index: 120
     position: fixed
     right: 50%
-    top: 59px
+    top: 50px
     display: flex
     flex-direction: column
     align-items: flex-end
@@ -878,7 +878,7 @@
     padding-right: 40px
   &__desc
     margin-bottom: 48px
-    max-width: 290px
+    max-width: 300px
     white-space: normal
     margin-left: 0
   &__title
@@ -895,11 +895,11 @@
     margin-bottom: 55px
   &__text
     margin-bottom: 80px
+    color: rgb(114, 116, 116)
     ul
       flex-direction: column
       align-items: flex-start
     li
-      opacity: 0.7
       position: relative
       text-transform: uppercase
       padding-left: 20px
@@ -917,7 +917,7 @@
         width: 4px
         height: 4px
         transform: translateY(-50%)
-        background: $black
+        background: rgb(114, 116, 116)
         border-radius: 50%
     // &:last-child
     //   margin-bottom: 0
@@ -953,6 +953,10 @@
     margin-bottom: 40px
     &:last-child
       margin-bottom: 0
+    u
+      color: $blue
+      font-weight: 500
+      text-transform: uppercase
     p
       margin-bottom: 10px
       &:last-child
@@ -996,10 +1000,6 @@
         bottom: 0
         width: 7px
         background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
-      u
-        color: $blue
-        font-weight: 500
-        text-transform: uppercase
     &-body
       p
         margin-bottom: 10px
@@ -1138,12 +1138,28 @@
   padding-bottom: 35px
   padding-left: 1px
   padding-right: 1px
+  &__tables
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    margin-left: -20px
+    margin-right: -20px
+    .data
+      &__table
+        margin-left: 20px
+        margin-right: 20px
+        &:nth-of-type(1)
+          width: calc(60% - 40px)
+        &:nth-of-type(2)
+          width: calc(40% - 40px)
+        th, td
+          width: calc(100% / 3)
   &__table
     width: calc(100% - 1px)
     margin-left: 1px
     text-align: center
     border-collapse: collapse
-    border-bottom: 1px solid #C4C4C4
+    border-bottom: 1px solid #EDEDED
     caption
       color: #727474
       font-size: 16px
@@ -1161,24 +1177,61 @@
         padding-left: 0
       &:last-child
         padding-right: 0
+      > div
+        display: flex
+        > div
+          width: 50%
+          padding-left: 5px
+          padding-right: 5px
+          &:nth-of-type(1)
+            text-align: left
+          &:nth-of-type(2)
+            text-align: right
     th
+      position: relative
       font-size: 14px
       line-height: 16px
       font-weight: 600
       color: $blue
       padding-top: 20px
       text-transform: uppercase
+      padding-bottom: 26px
+      background: #fff
+      > div
+        color: #727474
+        font-size: 12px
+        line-height: 11px
+        font-weight: 500
+        text-transform: none
+        padding-top: 12px
+      
+      &:first-child
+        &:after
+          left: 0
+      &:last-child
+        &:after
+          right: 0
       &:after
         content: ''
         display: block
         height: 7px
-        margin-top: 19px
+        position: absolute
+        bottom: 0
+        left: 8px
+        right: 8px
         background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
     td
       padding-top: 16px
       padding-bottom: 16px
+      font-size: 16px
       line-height: 18px
       color: rgba(114, 116, 116, 1)
+      > div
+        font-size: 16px
+        line-height: 18px
+        > div 
+          &:nth-of-type(1), &:nth-of-type(2)
+            text-align: center
     tbody
       tr
         &:nth-of-type(even)
@@ -1190,3 +1243,76 @@
     &.--w3
       th, td
         width: calc(100% / 3)
+    &.--bt
+      border-top: 5px solid #EDEDED
+    &.--f-col
+      th
+        &:nth-of-type(1)
+          min-width: 165px
+      td
+        &:nth-of-type(1)
+          font-size: 20px
+          line-height: 18px
+          color: $blue
+          font-weight: 500
+
+
+
+.props
+  padding-top: 100px
+  &__inner
+    padding-top: 210px
+    padding-bottom: 65px
+    &:before
+      z-index: -5
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: #F9F9F9
+  &__main
+    opacity: 0.02
+    top: -125px
+    color: #00364E
+  &__subtitle, &__title
+    margin-left: 0
+  &__subtitle
+    margin-bottom: 35px
+  &__title
+    max-width: 800px
+    margin-bottom: 85px
+  &__list
+    max-width: 600px
+    margin-left: auto
+  &__item
+    width: 50%
+    padding-right: 40px
+    margin-bottom: -15px
+    &:last-child
+      margin-bottom: 0
+    &:nth-of-type(even)
+      margin-left: auto
+    &-count
+      opacity: 0.2
+      color: #8A8A8A
+      font-size: 54px
+      font-weight: 500
+      line-height: 1
+      letter-spacing: 0.05em
+      margin-bottom: 10px
+    &-title
+      font-weight: 700
+      line-height: 1.05
+      letter-spacing: 3px
+      text-transform: uppercase
+      color: $blue
+    &-text
+      opacity: 0.7
+      font-size: 16px
+      line-height: 1.25
+      color: #363838
+      margin-top: 20px
+
+
