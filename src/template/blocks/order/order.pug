@@ -2,18 +2,20 @@ include ../../pug/vars
 
 .order.sec
   .case
-    .order__btn.btn.--md
-    .order__wrap.row
-      .order__inner
-        .order__icon
-          img(src="" alt="")
-        .order__text
-          .order__title сЕРТИФИКАТ БЕЗОПАСНОТИ
-          .order__desc в соответствии с ГОСТ 30732-2020
-      .order__policy.check
-        input.check__input(type="checkbox" name="policy" checked="checked")
-        .check__wrap
-          .check__box
-          .check__title Я согласен с политикой конфиденциальности
+    .order__block
+      a.order__button(href="#modal-order" data-fancybox="") заявка на поставку
+      .order__wrap.row
+        .order__inner
+          .order__icon
+            img(src="uploads/icons/cert-medal.png" alt="")
+          .order__text
+            .order__title сЕРТИФИКАТ БЕЗОПАСНОТИ
+            .order__desc в соответствии <br>с ГОСТ 30732-2020
+        .order__policy.check.--md
+          input.check__input(type="checkbox" name="policy" checked="checked")
+          .check__wrap
+            .check__box
+              <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.015625 4.30625L1.24063 3.08125L2.94688 4.89312L7.27813 0.5L8.50313 1.725L2.94688 7.36875L0.015625 4.30625Z" fill="white"/> </svg>
+            .check__title Я согласен с политикой конфиденциальности
   .lines
     

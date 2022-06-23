@@ -49,10 +49,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         introVolume = document.querySelector('.intro__volume');
         introVolumeClass = '--unmute';
     
-  introVolume.addEventListener('click', ()=>{
-    introVolume.classList.toggle(introVolumeClass);
-    introVideo.muted = !introVideo.muted;
-  });
+  if (introVideo) {
+    introVolume.addEventListener('click', ()=>{
+      introVolume.classList.toggle(introVolumeClass);
+      introVideo.muted = !introVideo.muted;
+    });
+  }
 
 	// Fields
 	let fields = document.querySelectorAll('.field');

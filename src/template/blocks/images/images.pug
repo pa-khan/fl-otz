@@ -3,9 +3,9 @@ include ../../pug/vars
 .images.sec
   .case
     if images
-      .images__list
+      .images__list.row
         each item in images
-          .images__item.img
+          a.images__item.img(href=item data-fancybox="")
             img(src=item alt="")
   .lines
     

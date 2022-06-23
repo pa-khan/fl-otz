@@ -53,7 +53,7 @@
   letter-spacing: 8px
   text-transform: uppercase
   color: #277885
-  margin-left: 298px
+  margin-left: 295px
   white-space: nowrap
 
 
@@ -450,24 +450,27 @@
 
 .advantages
   padding-top: 170px
-  padding-bottom: 235px
+  padding-bottom: 100px
   &__main
     top: -146px
   &__subtitle
     margin-bottom: 36px
   &__title
-    margin-bottom: 165px
+    margin-bottom: 125px
   &__list
     margin-left: -10px
     margin-right: -10px
+    margin-bottom: -40px
   &__item
     width: calc(100% / 4)
     padding-left: 10px
     padding-right: 10px
     margin-left: -5px
-    &:first-of-type
+    margin-bottom: 40px
+    &:first-of-type, &:nth-of-type(5n)
       margin-left: 0px
   &.--steps
+    padding-bottom: 235px
     .advantages
       &__item
         &:nth-of-type(even)
@@ -489,6 +492,21 @@
     text-transform: uppercase
     margin-left: 10px
     color: $blue
+  &__value
+    font-size: 54px
+    line-height: 1
+    color: rgba(138, 138, 138, 0.2)
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    margin-bottom: 10px
+  &__title
+    min-height: 42px
+    line-height: 1.05
+    font-weight: 700
+    color: $blue
+    letter-spacing: 3px
+    text-transform: uppercase
+    margin-bottom: 25px
   &__text
     opacity: .7
     font-size: 17px
@@ -844,3 +862,331 @@
     margin-bottom: -35px
     img
       margin: 0 auto
+
+
+.first
+  padding-top: 107px
+
+
+
+.product
+  &__wrap
+    padding-top: 95px
+    padding-bottom: 135px
+  &__left
+    width: calc(100% - 590px)
+    padding-right: 40px
+  &__desc
+    margin-bottom: 48px
+    max-width: 290px
+    white-space: normal
+    margin-left: 0
+  &__title
+    margin-left: 0
+    font-size: 55px
+    font-weight: 500
+    line-height: 1
+    background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+    text-transform: uppercase
+    margin-bottom: 55px
+  &__text
+    margin-bottom: 80px
+    ul
+      flex-direction: column
+      align-items: flex-start
+    li
+      opacity: 0.7
+      position: relative
+      text-transform: uppercase
+      padding-left: 20px
+      font-size: 16px
+      line-height: 20px
+      font-weight: 500
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 5px
+        width: 4px
+        height: 4px
+        transform: translateY(-50%)
+        background: $black
+        border-radius: 50%
+    // &:last-child
+    //   margin-bottom: 0
+  &__right
+    width: 590px
+
+  &__inner
+    padding: 38px
+    background: #FBFBFB
+    margin-bottom: 20px
+    .product
+      &__desc
+        max-width: 440px
+        text-align: center
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 20px
+
+
+
+  &__img
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 420px
+    &.--hidden
+      display: none
+    
+  &__info
+    font-size: 16px
+    line-height: 20px
+    color: rgba(114, 116, 116, 1)
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+    p
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+    ul
+      align-items: flex-start
+      flex-direction: column
+    li
+      position: relative
+      padding-left: 12px
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        width: 4px
+        height: 4px
+        border-radius: 50%
+        transform: translateY(-50%)
+        background: rgba(114, 116, 116, 1)
+
+      p
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
+      u
+        text-transform: none
+    &-head
+      position: relative
+      padding-top: 4px
+      padding-bottom: 4px
+      padding-left: 32px
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        width: 7px
+        background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
+      u
+        color: $blue
+        font-weight: 500
+        text-transform: uppercase
+    &-body
+      p
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
+
+.info
+  padding-top: 120px
+  padding-bottom: 95px
+  &__main
+    top: -125px
+  &__title, &__subtitle
+    margin-left: 0
+  &__subtitle
+    margin-bottom: 35px
+  &__title
+    max-width: 550px
+    margin-bottom: 95px
+  &__left, &__right
+    width: calc(100% / 2)
+  &__left
+    padding-right: 15px
+  &__text
+    ul
+      align-items: flex-start
+      flex-direction: column
+    li
+      position: relative
+      padding-left: 12px
+      text-transform: uppercase
+      font-weight: 500
+      font-size: 16px
+      line-height: 20px
+      color: rgba(#363838, 0.7)
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        width: 4px
+        height: 4px
+        border-radius: 50%
+        transform: translateY(-50%)
+        background: rgba(#363838, 0.7)
+  &__desc
+    margin-top: 80px
+    font-size: 16px
+    line-height: 1.25
+    color: #277885
+    max-width: 595px
+
+
+.images
+  &__list
+    margin: 0 -12px -24px
+  &__item
+    position: relative
+    width: calc(100% / 4 - 24px)
+    height: 220px
+    margin: 0 12px 24px
+    overflow: hidden
+    &:nth-of-type(1)
+      width: calc(100% - 24px)
+      height: 625px
+      margin-bottom: 30px
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: linear-gradient(0deg, rgba(38, 106, 169, 0.3), rgba(38, 106, 169, 0.3))
+
+.order
+  margin-top: 60px
+  &__block
+    display: flex
+    flex-direction: column
+  &__button
+    display: flex
+    margin-left: auto
+    font-size: 17px
+    line-height: 1.25
+    font-weight: 700
+    text-transform: uppercase
+    background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+    margin-bottom: 13px
+  &__wrap
+    &:before
+      content: ''
+      display: block
+      width: 100%
+      height: 7px
+      background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
+      margin-bottom: 28px
+  &__inner
+    display: flex
+    align-items: center
+  &__icon
+    display: flex
+    align-items: center
+    width: 62px
+    height: 62px
+  &__text
+    max-width: 225px
+    font-size: 15px
+    line-height: 1.27
+    margin-left: 13px
+    text-transform: uppercase
+    color: $blue
+  &__title
+    font-weight: 700
+    margin-bottom: 10px
+
+  &__policy
+    margin-left: auto
+    width: 120px
+    &.--md
+      .check
+        &__box
+          margin-left: auto
+        &__title
+          margin-left: 0
+
+
+.data
+  padding-top: 120px
+  padding-bottom: 35px
+  padding-left: 1px
+  padding-right: 1px
+  &__table
+    width: calc(100% - 1px)
+    margin-left: 1px
+    text-align: center
+    border-collapse: collapse
+    border-bottom: 1px solid #C4C4C4
+    caption
+      color: #727474
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      padding: 13px 0
+      text-transform: uppercase
+      font-weight: 500
+      background: #F2F8FA
+    th, td
+      position: relative
+      padding-left: 8px
+      padding-right: 8px
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+    th
+      font-size: 14px
+      line-height: 16px
+      font-weight: 600
+      color: $blue
+      padding-top: 20px
+      text-transform: uppercase
+      &:after
+        content: ''
+        display: block
+        height: 7px
+        margin-top: 19px
+        background: linear-gradient(81.18deg, #0662BD 0.99%, #0183EA 111.07%)
+    td
+      padding-top: 16px
+      padding-bottom: 16px
+      line-height: 18px
+      color: rgba(114, 116, 116, 1)
+    tbody
+      tr
+        &:nth-of-type(even)
+          td
+            background: #F2F8FA
+        &:nth-of-type(odd)
+          td
+            background: #fff
+    &.--w3
+      th, td
+        width: calc(100% / 3)
