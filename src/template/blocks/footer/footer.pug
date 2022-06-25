@@ -48,7 +48,7 @@ footer.footer.sec
         .form__main.h0 CALL
         .form__subtitle.h2 поможем. посоветуем
         .form__title заявка на поставку
-        .form__inner.row
+        form.form__inner.row
           .form__field.field.--md.--gray
             .field__wrap
               label.field__placeholder Количество единиц
@@ -61,7 +61,26 @@ footer.footer.sec
             .field__wrap
               label.field__placeholder Ваше имя
               input.field__area(type="text" name="name")
-          .form__field.field.--md.--gray.--phone
+          .form__field.field.--md.--gray.--phone.--required
+            .field__wrap
+              label.field__placeholder Телефон
+              input.field__area(type="tel" name="phone")
+          button.form__button.button.--md.--b-blue #[span отправить]
+
+
+  .modal.--md#modal-feedback
+    .modal__close(data-fancybox-close="")
+    .modal__inner
+      .form
+        .form__main.h0 CALL
+        .form__subtitle.h2 ответим на все вопросы
+        .form__title Связаться с нами
+        form.form__inner.row
+          .form__field.field.--md.--gray
+            .field__wrap
+              label.field__placeholder Ваше имя
+              input.field__area(type="text" name="name")
+          .form__field.field.--md.--gray.--phone.--required
             .field__wrap
               label.field__placeholder Телефон
               input.field__area(type="tel" name="phone")

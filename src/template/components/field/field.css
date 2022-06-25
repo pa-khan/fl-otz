@@ -58,3 +58,6 @@
 .field.--filled.--gray .field__wrap:after, .field.--focus.--gray .field__wrap:after {
   width: 80%;
 }
+.field.--filled.--error .field__placeholder, .field.--focus.--error .field__placeholder {
+  color: #fff;
+}
