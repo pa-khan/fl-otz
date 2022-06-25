@@ -40,6 +40,7 @@ include ../../pug/vars
           .case
             .catalog__item-inner
               .catalog__item-count= '0' + (index + 1)
+              .catalog__item-title.--hidden!=item.title
               .catalog__item-img.img
                 img(src='uploads/catalog/catalog-' + (index + 1) + '.jpg')
               .catalog__item-content

@@ -7,9 +7,12 @@ if product
         .product__left
           .product__desc.h2!= product.gost
           .product__title= product.title
-          .product__img.--hidden.--show-xs
-            img(src=product.img alt="")
-          .product__text.t1!= product.text
+          .product__inner.--hidden
+            .product__desc.h2 Снижают теплопотерии защищают от коррозии
+            .product__img
+              img(src=product.img alt="")
+          if product.text
+            .product__text.t1!= product.text
           .product__infos
             .product__infos-left
               if product.infos.left

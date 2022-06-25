@@ -115,7 +115,17 @@
     .panel
       &__ham
         div
-          background: $blue
+          background: #9091A9 !important
+          &:nth-of-type(1)
+            top: 9px
+            transform: rotate(-45deg)
+          &:nth-of-type(2)
+            opacity: 0
+          &:nth-of-type(3)
+            width: 25px
+            top: -9px
+            transform: rotate(45deg)
+        
     .nav
       opacity: 1
       visibility: visible
@@ -196,6 +206,8 @@
       margin-bottom: 6px
       transition: .3s
       background: $blue
+      transition: .3s
+      position: relative
       &:nth-of-type(1)
         width: 25px
       &:nth-of-type(2)
@@ -357,8 +369,9 @@
 
 .intro
   position: relative
-  min-height: 100vh
-  padding-top: 75px
+  height: 100vh
+  min-height: 665px
+  padding-top: 120px
   display: flex
   align-items: center
   justify-content: center
@@ -560,6 +573,7 @@
       text-transform: uppercase
       color: $blue
       padding-left: 3px
+      transition: .3s
     &-img
       width: 294px
       min-width: 294px
@@ -575,6 +589,8 @@
       color: $blue
       transition: .3s
       margin-bottom: 37px
+      &.--hidden
+        display: none
       &:last-child
         margin-bottom: 0
     &-desc
@@ -630,6 +646,7 @@
   &__grp
     width: 125px
     margin-left: auto
+    margin-right: 20px
   &__check
     margin-top: 28px
 
@@ -723,6 +740,8 @@
     width: 295px
   &__right
     width: 295px
+  &__company
+    display: none
   &__phone
     font-size: 36px
     line-height: 1.5
@@ -748,6 +767,8 @@
     font-weight: 900
   &__socials
     margin-top: 56px
+  &__links
+    display: none
   &__bot
     padding-top: 37px
     padding-bottom: 12px
@@ -934,6 +955,8 @@
     padding: 38px
     background: #FBFBFB
     margin-bottom: 20px
+    &.--hidden
+      display: none
     .product
       &__desc
         max-width: 440px
@@ -1062,6 +1085,8 @@
 
 
 .images
+  &__cert
+    display: none
   &__list
     margin: 0 -12px -24px
   &__item
@@ -1084,7 +1109,7 @@
         background: linear-gradient(0deg, rgba(38, 106, 169, 0.3), rgba(38, 106, 169, 0.3))
 
 .order
-  margin-top: 60px
+  padding-top: 60px
   &__block
     display: flex
     flex-direction: column
@@ -1645,3 +1670,835 @@
       &:last-child
         margin-bottom: 0
 
+
+@media screen and (max-height: 665px) and (min-width: 768px)
+  .nav
+    &__wrap
+      padding-top: 100px
+    &__company
+      display: none
+    &__link
+      line-height: 35px
+    &__sub
+      padding-top: 0
+      padding-bottom: 15px
+  
+@media screen and (max-width: 1400px)
+  .contacts
+    &__map
+      width: 50%
+      margin-right: 0
+
+@media screen and (max-width: 1210px)
+  .case
+    max-width: 960px
+
+  .lines
+    display: none
+
+  .nav
+    &__blocks
+      display: none
+
+  .panel
+    &__desc
+      margin-right: 40px
+    &__phone
+      margin-right: 40px
+    &__ham
+      margin-right: -465px
+
+  .intro
+    &__desc
+      letter-spacing: 13.5px
+      margin-bottom: 20px
+    &__name
+      font-size: 140px
+
+
+  .h1, .h2
+    margin-left: 0
+
+
+  .advantages
+    &.--steps
+      padding-bottom: 50px
+    &__item
+      margin-left: 0
+
+  .advantage
+    &__head
+      flex-direction: column
+    &__name
+      margin-left: 0
+    &__title
+      font-size: 17px
+      letter-spacing: 2px
+      min-height: 42px
+      margin-bottom: 15px
+    &__text
+      br
+        display: none
+
+  .catalog
+    &__item
+      &-count
+        width: 120px
+        min-width: 120px
+      &-content
+        margin-left: 40px
+      &-arrow
+        margin-right: 0
+
+
+  .consult
+    &__left
+      width: 40%
+    &__right
+      width: 60%
+
+  .geo
+    &__map
+      width: 1000px
+
+
+  .desc
+    &__content
+      blockquote
+        br
+          display: none
+
+  .steps
+    padding-bottom: 130px
+    &__title
+      margin-bottom: 120px
+    &__item
+      margin-bottom: 50px
+      &:after
+        left: 49px
+        height: calc(100% + 30px)
+        margin-top: 0
+    &__control
+      order: 1 !important
+      width: 100px
+      min-width: 100px
+      height: 100px
+    &__img
+      order: 2 !important
+      width: 400px
+      min-width: 400px
+      height: 400px
+      margin-left: 50px
+      margin-right: 50px
+    &__content
+      align-items: flex-start !important
+      order: 3 !important
+    &__text
+      text-align: left !important
+    &__feedback
+      margin-top: 45px
+
+
+  .contacts
+    &__title
+      margin-bottom: 75px
+    &__map
+      width: 100%
+      height: 450px
+      margin-right: 0
+      margin-top: 50px
+
+  .product
+    &__left
+      width: 50%
+    &__title
+      font-size: 44px
+      line-height: 52px
+      margin-bottom: 30px
+    &__right
+      width: 50%
+
+  .data__table.--f-col th:nth-of-type(1)
+    min-width: 115px
+  
+  .footer
+    &__bot
+      .footer
+        &__left, &__mid, &__right
+          width: calc(100% / 3)
+        &__mid
+          text-align: center
+        &__right
+          text-align: right
+
+@media screen and (max-width: 991px)
+  .case
+    max-width: 750px
+
+
+  .nav
+    &__company
+      display: none
+
+  .panel
+    &__email
+      display: none
+    &__ham
+      margin-right: -360px
+
+  .intro
+    &__foot
+      padding-left: 0
+
+  .h0
+    display: none
+
+  .h2
+    margin-bottom: 20px
+
+
+  .advantages
+    &.--steps
+      .advantages
+        &__item
+          &:nth-of-type(2n)
+            margin-top: 0
+    &__inner
+      padding-top: 70px
+      padding-bottom: 70px
+    &__list
+      margin-bottom: -40px
+    &__title
+      margin-bottom: 40px
+    &__item
+      width: calc(100% / 2)
+      
+  .catalog
+    padding-top: 0px
+    padding-bottom: 80px
+    &__title
+      margin-bottom: 40px
+    &__item
+      &-count
+        width: 90px
+        min-width: 90px
+      &-img
+        width: 250px
+        min-width: 250px
+        height: 250px
+      &-content
+        margin-left: 25px
+        br
+          display: none
+      &-title
+        margin-bottom: 20px
+      &-arrow
+        width: 60px
+        min-width: 60px
+        height: 60px
+
+  .consult
+    padding-top: 0
+    padding-bottom: 0px
+
+
+  .geo
+    padding-bottom: 0
+
+  .news
+    padding-top: 70px
+    padding-bottom: 40px
+    &__title
+      margin-bottom: 40px
+
+
+  .production
+    &__inner
+      padding-top: 70px
+      padding-bottom: 85px
+    &__title
+      margin-bottom: 40px
+    &__content
+      padding-top: 0
+      h4
+        margin-bottom: 30px
+    &__img-wrap
+      padding-right: 0
+    &__img
+      height: 100%
+
+
+  .steps
+    padding-bottom: 30px
+    &__item
+      &:after
+        left: 21px
+    &__control
+      width: 42px
+      min-width: 42px
+    &__dot
+      &:before
+        display: none
+    &__img
+      width: 340px
+      min-width: 340px
+      height: 340px
+      margin-left: 30px
+      margin-right: 30px
+    &__content
+      width: 100%
+    &__count
+      font-size: 140px
+    &__text
+      font-size: 18px
+      line-height: 22px
+    &__feedback
+      padding-right: 110px
+
+  .certs
+    padding-top: 120px
+    &__title
+      margin-bottom: 40px
+
+  .product
+    &__wrap
+      padding-top: 70px
+      padding-bottom: 70px
+    &__left
+      width: 100%
+      padding-right: 0
+      margin-bottom: 20px
+    &__title
+      margin-bottom: 15px
+    &__img
+      img
+        margin-left: auto
+        margin-right: auto
+    &__text
+      margin-bottom: 30px
+    &__inner
+      display: none
+      &.--hidden
+        display: block
+    &__info
+      br
+        display: none
+    &__right
+      width: 100%
+
+  .info
+    padding-top: 40px
+    padding-bottom: 70px
+    &__title
+      margin-bottom: 40px
+    &__desc
+      margin-top: 40px
+
+  .images
+    &__item
+      height: 169px
+      &:nth-of-type(1)
+        height: 470px
+        margin-bottom: 20px
+
+
+  .order
+    padding-bottom: 80px
+  
+  .props
+    padding-top: 0
+    &__inner
+      padding-top: 70px
+    &__list
+      margin-right: auto
+
+  .data
+    padding-top: 70px
+    &__table
+      &.--overflow-sm
+        display: block
+        overflow-x: auto
+
+  .contacts
+    &__inner
+      padding-top: 70px
+      padding-bottom: 70px
+    &__title
+      white-space: nowrap
+      font-size: 72px
+
+  .news-item
+    &__inner
+      padding-top: 70px
+      padding-bottom: 70px
+    &__title
+      font-size: 70px
+      margin-bottom: 40px
+    &__img
+      height: 400px
+  
+@media screen and (max-width: 767px)
+  .case
+    max-width: 100%
+
+
+  .nav
+    top: 63px
+    overflow-y: auto
+    &__wrap
+      align-items: flex-start
+      justify-content: flex-start
+      padding-top: 35px
+    &__left, &__right
+      width: 100%
+    &__left
+      align-items: center
+      justify-content: center
+      text-align: center
+      order: 2
+      height: auto
+      margin-top: 40px
+      padding-bottom: 45px
+      &:before
+        display: block
+        opacity: .3
+        content: ''
+        width: 140px
+        height: 1px
+        margin: 0 auto 38px
+        background: #C4C4C4
+    &__socials
+      .socials
+        &__list
+          justify-content: center
+    &__list
+      display: block
+    &__item
+      display: block
+      &.--has-nav
+        .nav
+          &__link
+            padding-right: 0
+            &:after
+              display: none
+    &__link
+      font-size: 16px
+      line-height: 42px
+      text-align: center
+      display: block
+    &__sub
+      padding-top: 0
+      padding-bottom: 15px
+      display: block
+      .nav
+        &__link
+          font-size: 12px
+          line-height: 25px
+          letter-spacing: 0.02em
+    &__right
+      order: 1
+
+
+  .panel
+    padding-top: 20px
+    padding-bottom: 20px
+    background: #fff !important
+    border-bottom: 1px solid #C4C4C4 !important
+    &__logo
+      display: block
+      margin-top: 0
+      img
+        position: static
+        &:nth-of-type(1)
+          display: none
+        &:nth-of-type(2)
+          opacity: 1 !important
+    &__ham
+      top: 21px
+      right: 15px
+      margin-right: 0
+      div
+        background: $blue !important
+
+    &__desc, &__phone
+      display: none
+
+
+  .intro
+    padding-top: 205px
+    padding-bottom: 150px
+    height: auto
+    min-height: 1px
+    &__desc
+      font-size: 14px
+      line-height: 1
+      letter-spacing: 15px
+      max-width: 240px
+      margin-bottom: 36px
+    &__name
+      font-size: 77px
+      line-height: 1
+      letter-spacing: 19px
+    &__text
+      font-size: 15px
+      line-height: 1.54
+      font-weight: 400
+      letter-spacing: 0.02em
+      margin-left: 0
+      max-width: 265px
+    &__foot
+      margin-top: 75px
+    &__volume
+      display: none
+
+
+  .h1
+    font-size: 29px
+    line-height: 1
+
+  .h2
+    font-size: 10px
+    line-height: 12.5px
+    letter-spacing: 8px
+    margin-bottom: 18px
+
+
+  .advantages
+    &__inner
+      padding-top: 50px
+      padding-bottom: 20px
+      border-bottom: 1px solid rgba(0,0,0,0.15)
+    &__title
+      margin-bottom: 37px
+    &__list
+      margin-bottom: -30px
+    &__item
+      margin-bottom: 30px
+
+  .advantage
+    &__head
+      margin-bottom: 16px
+    &__count
+      padding-top: 0
+      font-size: 29px
+      font-weight: 500
+      line-height: 1
+      margin-bottom: 9px
+    &__name
+      font-size: 14px
+      line-height: 1.2
+      letter-spacing: 2px
+    &__text
+      font-size: 13px
+      line-height: 1.25
+      
+
+  .catalog
+    padding-bottom: 50px
+    &__title
+      margin-bottom: 0px
+
+    &__item
+      &-inner
+        flex-wrap: wrap
+        padding-top: 35px
+        padding-bottom: 35px
+      &-count
+        width: 100%
+        font-size: 29px
+        line-height: 1
+        margin-bottom: 9px
+        padding-left: 0
+      &-title
+        font-size: 14px
+        line-height: 1.2
+        letter-spacing: 3px
+        display: none
+        &.--hidden
+          display: block
+      &-img
+        width: 100%
+        margin-bottom: 38px
+      &-content
+        max-width: calc(100% - 60px)
+        font-size: 14px
+        line-height: 1.25
+        margin-left: 0
+        padding-right: 20px
+        br
+          display: none
+      &:first-of-type
+        .catalog
+          &__item
+            &-inner
+              border-top: none
+            
+  .consult 
+    &__title
+      margin-bottom: 10px
+    &__left
+      width: 100%
+      margin-bottom: 40px
+    &__right
+      width: 100%
+      padding-left: 0
+    &__form
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 0
+    &__field
+      width: 100%
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 32px
+    &__grp
+      margin-left: 0
+      margin-right: 0
+      height: 120px
+      
+  .geo
+    padding-top: 65px
+    &__title
+      margin-bottom: -29px
+    &__map
+      width: 700px
+    
+  .news
+    padding-top: 50px
+    padding-bottom: 50px
+    .case
+      padding-left: 9px
+      padding-right: 9px
+    &__subtitle, &__title
+      padding-left: 6px
+      padding-right: 6px
+    &__title
+      margin-bottom: 25px
+    &__item
+      opacity: 1
+      display: block
+      width: 160px
+      padding-left: 6px
+      padding-right: 6px
+      pointer-events: auto
+      &-img
+        width: 100%
+        height: 180px
+      &-content
+        padding: 23px 0 0
+        width: 100%
+      &-title
+        font-size: 14px
+        line-height: 1.2
+        margin-bottom: 10px
+      &-date
+        font-size: 12px
+        line-height: 15px
+
+  .footer
+    &__top
+      padding-top: 37px
+      padding-bottom: 20px
+    &__left, &__mid
+      width: 100%
+    &__company
+      display: flex
+      align-items: center
+      width: 100%
+      padding-bottom: 25px
+      border-bottom: 1px solid rgba(0,0,0,0.1)
+    &__logo
+      width: 80px
+    &__desc
+      display: block
+      font-weight: 400
+    &__phone
+      font-size: 23px
+      line-height: 1.5
+      letter-spacing: 2px
+      margin-top: 5px
+    &__email
+      font-size: 12px
+      line-height: 1.64
+      font-weight: 500
+    &__address
+      margin-top: 11px
+      padding-top: 12px
+      font-size: 12px
+      line-height: 1.3
+      font-weight: 500
+      border-top: 1px solid rgba(0,0,0,0.1)
+      // border-bottom: 1px solid rgba(0,0,0,0.1)
+      text-transform: none
+      br
+        display: none
+    &__right
+      display: flex
+      align-items: center
+      margin-top: 27px
+    &__links
+      display: block
+      font-size: 10px
+      line-height: 1.64
+      a
+        color: #9091A9
+        &:hover
+          color: $blue
+    &__policy
+      margin-bottom: 5px
+    &__socials
+      margin-top: 0
+      margin-left: auto
+      .socials
+        &__list
+          justify-content: flex-end
+    &__bot
+      padding-top: 8px
+      padding-bottom: 8px
+      .footer
+        &__left
+          width: 100%
+        &__mid, &__right
+          display: none
+
+  .first
+    padding-top: 63px
+
+  .product
+    &__wrap
+      padding-top: 40px
+      padding-bottom: 20px
+      border-bottom: 1px solid rgb(0,0,0,.15)
+    &__desc
+      margin-bottom: 18px
+    &__title
+      font-size: 29px
+      line-height: 1
+      margin-bottom: 20px
+    &__inner
+      margin-left: -15px
+      margin-right: -15px
+      padding: 23px 17px 5px
+      margin-bottom: 30px
+      .product__desc
+        margin-bottom: 5px
+        text-align: left
+        max-width: 100%
+    &__img
+      max-height: 305px
+    
+    &__text
+      padding-bottom: 30px
+      border-bottom: 1px solid rgb(0,0,0,.15)
+      li
+        font-size: 14px
+        line-height: 20px
+        margin-bottom: 4px
+    &__info
+      font-size: 14px
+      line-height: 20px
+      margin-bottom: 30px
+      &-head
+        padding-top: 0
+        padding-bottom: 0
+      p
+        margin-bottom: 10px
+  
+  .info
+    padding-top: 65px
+    padding-bottom: 0
+    &__title
+      margin-bottom: 30px
+    &__left
+      padding-right: 0
+      width: 100%
+      margin-bottom: 25px
+    &__right
+      width: 100%
+    &__text
+      li
+        margin-bottom: 4px
+        &:before
+          top: 8px
+          transform: none
+    &__desc
+      margin-top: 30px
+
+  .images
+    padding-top: 70px
+    &__cert
+      display: flex
+      margin-bottom: 28px
+    &__list
+      flex-wrap: nowrap
+      overflow-x: auto
+      margin: 0
+    .images__item
+      width: 267px
+      min-width: 267px
+      height: 267px
+      margin-left: 0px
+      margin-right: 32px
+      margin-bottom: 0
+      &:last-of-type
+        margin-right: 0
+
+
+  .order
+    padding-top: 35px
+    padding-bottom: 20px
+    &__desc
+      color: #848585
+    &__button
+      margin-left: 0
+    &__wrap
+      .order
+        &__inner
+          display: none
+        &__policy
+          margin-left: 0
+          width: 100%
+          .check
+            &__wrap
+              display: flex
+              align-items: center
+            &__box
+              margin-left: 0
+              margin-right: 5px
+
+  .props
+    padding-top: 30px
+    &__inner
+      padding-top: 50px
+      padding-bottom: 50px
+    &__title
+      margin-bottom: 30px
+    &__item
+      padding-right: 0
+      margin-bottom: 20px
+      &-title
+        font-size: 14px
+        line-height: 1.05
+        letter-spacing: 0.02em
+        br
+          display: none
+      &-text
+        margin-top: 10px
+        font-size: 14px
+        line-height: 1.25
+        letter-spacing: 0.02em
+        
+  .data
+    padding-top: 60px
+    &__tables
+      margin-left: 0
+      margin-right: 0
+      .data
+        &__table
+          width: 100% !important
+          margin-left: 0 !important
+          margin-right: 0 !important
+          margin-bottom: 40px
+          border-top: 4px solid rgba(#C4C4C4, 0.3)
+          &:last-child
+            margin-bottom: 0
