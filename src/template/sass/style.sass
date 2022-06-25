@@ -2177,7 +2177,7 @@
   .h2
     font-size: 10px
     line-height: 12.5px
-    letter-spacing: 8px
+    letter-spacing: 6px
     margin-bottom: 18px
 
 
@@ -2209,6 +2209,11 @@
     &__text
       font-size: 13px
       line-height: 1.25
+    &__title
+      font-size: 14px
+      min-height: 30px
+      margin-bottom: 10px
+      letter-spacing: 1px
       
 
   .catalog
@@ -2711,12 +2716,19 @@
   .modal
     &.--md
       max-width: 100%
+      min-height: 1px
       width: 100%
-      padding: 60px 15px
+      padding: 70px 15px 40px
+    &__close
+      &:before, &:after
+        height: 2px
+
 
   .form
     &__title
       margin-bottom: 35px
+      font-size: 25px
+      line-height: 30px
     &__inner
       margin-left: 0
       margin-right: 0
@@ -2727,3 +2739,13 @@
     &__button
       margin-left: 0
       margin-top: 0
+
+  .thanks
+    &__title
+      margin-bottom: 10px
+      br
+        display: none
+    &__icon
+      width: 120px
+      margin-left: auto
+      margin-right: auto

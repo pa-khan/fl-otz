@@ -215,7 +215,6 @@ img, svg, path, circle, rect, line {
 
 .field__wrap {
   position: relative;
-  cursor: text;
 }
 .field__area {
   display: block;
@@ -226,6 +225,8 @@ img, svg, path, circle, rect, line {
   resize: none;
   transition: 0.3s;
   background: transparent;
+  cursor: text;
+  outline: none !important;
 }
 .field__area::placeholder {
   opacity: 0;
@@ -237,6 +238,7 @@ img, svg, path, circle, rect, line {
   right: 0;
   white-space: nowrap;
   transition: 0.3s;
+  cursor: text;
 }
 .field.--md .field__wrap {
   padding-bottom: 19px;
@@ -2768,7 +2770,7 @@ img, svg, path, circle, rect, line {
   .h2 {
     font-size: 10px;
     line-height: 12.5px;
-    letter-spacing: 8px;
+    letter-spacing: 6px;
     margin-bottom: 18px;
   }
   .advantages__inner {
@@ -2803,6 +2805,12 @@ img, svg, path, circle, rect, line {
   .advantage__text {
     font-size: 13px;
     line-height: 1.25;
+  }
+  .advantage__title {
+    font-size: 14px;
+    min-height: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
   }
   .catalog {
     padding-bottom: 50px;
@@ -3388,11 +3396,17 @@ img, svg, path, circle, rect, line {
   }
   .modal.--md {
     max-width: 100%;
+    min-height: 1px;
     width: 100%;
-    padding: 60px 15px;
+    padding: 70px 15px 40px;
+  }
+  .modal__close:before, .modal__close:after {
+    height: 2px;
   }
   .form__title {
     margin-bottom: 35px;
+    font-size: 25px;
+    line-height: 30px;
   }
   .form__inner {
     margin-left: 0;
@@ -3406,5 +3420,16 @@ img, svg, path, circle, rect, line {
   .form__button {
     margin-left: 0;
     margin-top: 0;
+  }
+  .thanks__title {
+    margin-bottom: 10px;
+  }
+  .thanks__title br {
+    display: none;
+  }
+  .thanks__icon {
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

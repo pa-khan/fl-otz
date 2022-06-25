@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
         headerClassWhite = '--white';
         headerClassOpen  = '--open';
 
+  Fancybox.bind("[data-fancybox]", {
+    dragToClose: false,
+    autoFocus: false,
+  });
+
   if (header.dataset.white) {
     headerToggleClass();
     window.addEventListener('scroll', headerToggleClass);
@@ -60,8 +65,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	let fields = document.querySelectorAll('.field');
 	 
 	if (fields) {
-		fields.forEach((field)=>{
+		fields.forEach((field, index)=>{
 			new Field(field);
+      field.ph = field.querySelector('.field__placeholder');
+
+      if (field.ph) {
+        field.area.setAttribute('id', 'field-' + index);
+        field.ph.setAttribute('for', 'field-' + index);
+      }
 
       if (field.classList.contains('--phone')) {
         IMask(field.area, {
@@ -108,36 +119,33 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }
 
   let map = document.getElementById('map');
-  ymaps.ready(function () {
-      var coords = map.getAttribute('data-position').split(', ');
-      
-      coords = coords.map((coord)=>{
-        return Number(coord);
-      });
+  if (map) {
+    ymaps.ready(function () {
+        var coords = map.getAttribute('data-position').split(', ');
+        
+        coords = coords.map((coord)=>{
+          return Number(coord);
+        });
 
 
-      console.log(coords);
+        console.log(coords);
 
-      var myMap = new ymaps.Map(map, {
-        center: coords,
-        zoom: 15,
-        controls: []
-      }, {
-        searchControlProvider: 'yandex#search'
-      });
+        var myMap = new ymaps.Map(map, {
+          center: coords,
+          zoom: 15,
+          controls: []
+        }, {
+          searchControlProvider: 'yandex#search'
+        });
 
-      let placemark = new ymaps.Placemark(coords, { }, {
-        iconLayout: 'default#image',
-        iconImageHref: 'uploads/icons/placemark.png',
-        iconImageSize: [67, 83],
-        iconImageOffset: [-33, -42],
-      });
+        let placemark = new ymaps.Placemark(coords, { }, {
+          iconLayout: 'default#image',
+          iconImageHref: 'uploads/icons/placemark.png',
+          iconImageSize: [67, 83],
+          iconImageOffset: [-33, -42],
+        });
 
-      myMap.geoObjects.add(placemark);
-  });
-
-  Fancybox.bind("[data-fancybox]", {
-    dragToClose: false,
-    autoFocus: false,
-  });
+        myMap.geoObjects.add(placemark);
+    });
+  }
 });

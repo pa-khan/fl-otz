@@ -1,6 +1,5 @@
 .field__wrap {
   position: relative;
-  cursor: text;
 }
 .field__area {
   display: block;
@@ -11,6 +10,8 @@
   resize: none;
   transition: 0.3s;
   background: transparent;
+  cursor: text;
+  outline: none !important;
 }
 .field__area::placeholder {
   opacity: 0;
@@ -22,6 +23,7 @@
   right: 0;
   white-space: nowrap;
   transition: 0.3s;
+  cursor: text;
 }
 .field.--md .field__wrap {
   padding-bottom: 19px;
