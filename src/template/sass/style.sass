@@ -1085,7 +1085,7 @@
 
 
 .images
-  &__cert
+  .images__cert
     display: none
   &__list
     margin: 0 -12px -24px
@@ -2036,6 +2036,24 @@
       margin-bottom: 40px
     &__img
       height: 400px
+
+
+  .modal
+    &.--md
+      width: 700px
+      padding: 60px
+    &__close
+      top: 30px
+      right: 30px
+
+  .form
+    &__subtitle
+      font-size: 16px
+      margin-bottom: 10px
+    &__title
+      font-size: 42px
+      line-height: 50px
+      margin-bottom: 30px
   
 @media screen and (max-width: 767px)
   .case
@@ -2426,7 +2444,7 @@
 
   .images
     padding-top: 70px
-    &__cert
+    .images__cert
       display: flex
       margin-bottom: 28px
     &__list
@@ -2502,3 +2520,210 @@
           border-top: 4px solid rgba(#C4C4C4, 0.3)
           &:last-child
             margin-bottom: 0
+
+  .desc
+    &__item
+      display: block
+      margin-bottom: 45px
+    &__img
+      width: 100%
+      height: 325px
+      margin-bottom: 20px
+    &__content
+      padding: 0 !important
+      width: 100%
+      h3
+        font-size: 18px
+        line-height: 20px
+        letter-spacing: 1.5px
+        margin-bottom: 20px
+      p
+        margin-bottom: 20px
+
+      blockquote
+        color: #277885
+        font-size: 10px
+        line-height: 12.5px
+        padding-top: 16px
+        padding-bottom: 16px
+        letter-spacing: 5px
+        border-top: 1px solid rgba(0,0,0,0.15)
+        border-bottom: 1px solid rgba(0,0,0,0.15)
+    &__feedback
+      padding-bottom: 30px
+      border-bottom: 1px solid rgba(0,0,0,0.15)
+    
+
+  .certs
+    padding-top: 60px
+    &:after
+      content: ''
+      display: block
+      margin-top: 23px
+      margin-left: 15px
+      margin-right: 15px
+      border-bottom: 1px solid rgba(0,0,0,0.15)
+    &__title
+      margin-bottom: 25px
+    &__list
+      margin-bottom: -24px
+    &__item
+      width: calc(100% / 2)
+      padding-right: 5px
+      margin-bottom: 24px
+      &-img
+        width: 94px
+        height: 94px
+        margin-bottom: 14px
+
+  .production
+    &__inner
+      padding-top: 40px
+      padding-bottom: 25px
+      border-bottom: 1px solid rgba(0,0,0,0.15)
+    &__title
+      margin-bottom: 30px
+    &__img-wrap
+      order: 1
+      width: 100%
+      height: 345px
+    &__content
+      order: 2
+      margin-top: 30px
+      width: 100%
+      font-size: 14px
+      line-height: 20px
+      padding-right: 0
+      br
+        display: none
+      u
+        font-weight: 500
+      h4
+        font-size: 15px
+        line-height: 28px
+        margin-bottom: 30px
+
+  .steps
+    padding-top: 60px
+    &__title
+      margin-bottom: 45px
+    &__item
+      position: relative
+      flex-wrap: wrap
+      margin-bottom: 55px
+      &:after
+        left: 17px
+        top: 100px
+        height: calc(100% + 30px)
+    &__control
+      width: 35px
+      min-width: 35px
+    &__dot
+      width: 35px
+      height: 35px
+      border-width: 12px
+    &__img
+      width: 170px
+      min-width: 170px
+      height: 170px
+    &__count
+      position: absolute
+      top: 120px
+      left: 210px
+      font-size: 50px
+      line-height: 50px
+    &__content
+      width: 100%
+    &__text
+      font-size: 13px
+      line-height: 1.05
+      letter-spacing: 1px
+      margin-left: 100px !important
+      margin-top: 24px
+      max-width: 260px
+      br
+        display: none
+
+    &__feedback
+      padding-right: 0
+      justify-content: flex-start
+      &-btn
+        margin-right: 0
+        margin-left: 28px
+        order: 2
+
+
+
+  .contacts
+    &__inner
+      padding-top: 40px
+      padding-bottom: 0px
+    &__title
+      margin-bottom: 45px
+    &__map
+      // order: 1
+      margin-top: 0
+      margin-bottom: 35px
+      height: 340px
+      width: calc(100% + 30px)
+      max-width: calc(100% + 30px)
+      margin-top: 40px
+      margin-left: -15px
+      margin-right: -15px
+      margin-bottom: 0
+    &__content
+      // order: 2
+      width: 100%
+    &__list
+      margin-left: -5px
+      margin-right: -5px
+    .contacts__item
+      width: calc(50% - 10px)
+      margin-left: 5px
+      margin-right: 5px
+
+  .contact
+    &__title
+      font-size: 14px
+      line-height: 14px
+      margin-bottom: 16px
+    &__inner
+      opacity: 0.7
+      font-size: 14px
+      line-height: 1.25
+
+  .news-item
+    &__inner
+      padding-top: 40px
+      padding-bottom: 50px
+    &__title
+      margin-bottom: 30px
+    &__img
+      width: auto
+      height: 280px
+      margin-left: -15px
+      margin-right: -15px
+    &__text
+      font-size: 14px
+      line-height: 20px
+      padding-top: 34px
+
+  .modal
+    &.--md
+      max-width: 100%
+      width: 100%
+      padding: 60px 15px
+
+  .form
+    &__title
+      margin-bottom: 35px
+    &__inner
+      margin-left: 0
+      margin-right: 0
+    &__field
+      width: 100%
+      margin-left: 0
+      margin-right: 0
+    &__button
+      margin-left: 0
+      margin-top: 0

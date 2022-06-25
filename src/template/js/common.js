@@ -135,4 +135,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
       myMap.geoObjects.add(placemark);
   });
+
+  Fancybox.bind("[data-fancybox]", {
+    dragToClose: false,
+    autoFocus: false,
+  });
 });
