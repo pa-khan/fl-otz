@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const buttons = document.querySelectorAll('.button');
   if (buttons) {
-    buttons.forEach((button)=>{
+    buttons.forEach((button) => {
       let line = document.createElement('div');
       line.className = 'button__line';
       button.append(line);
